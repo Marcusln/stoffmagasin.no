@@ -1,0 +1,1 @@
+I'm a theme meant for hacking so don't use me as a Parent Theme.

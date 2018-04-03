@@ -1,1 +1,1 @@
-# stoffmagasin.no
+Litt tekst og introduksjon her da.
