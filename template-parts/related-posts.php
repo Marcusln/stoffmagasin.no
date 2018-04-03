@@ -2,7 +2,7 @@
 
 
 
-// previous_post_link('%link',"$prevthumbnail  <p>%title</p>", TRUE); 
+// previous_post_link('%link',"$prevthumbnail  <p>%title</p>", TRUE);  test
 
 $prevPost = get_adjacent_post(false, '', true); // previous means older posts. next posts will throw an error for newest article
 $prevPostUrl = get_permalink($prevPost);
