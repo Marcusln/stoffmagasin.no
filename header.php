@@ -65,17 +65,20 @@
   color: black; padding: 5px;">Nr. 23 &nbsp;&nbsp;&nbsp;3. årgang <!--&nbsp;&nbsp;<i id="papirutgave-ikon" class="fa fa-chevron-down" style="font-weight: 100;" aria-hidden="true"></i>--></a>
     </div>
     <div class="" style="">
-      <!--<a href="https://www.facebook.com/STOFFmagasin/" target="_blank">
-        <i class="fa fa-facebook topbar-icon" style="padding: 0 3px 0 3px;" aria-hidden="true"></i>
+      <a href="https://www.facebook.com/STOFFmagasin/" target="_blank">
+        <i class="fa fa-facebook topbar-icon" style="padding: 0 3px 0 3px; font-size: 1.3rem;
+  margin-top: 5px;" aria-hidden="true"></i>
       </a>
       <a href="https://www.instagram.com/stoffmagasin/" target="_blank">
-        <i class="fa fa-instagram topbar-icon" style="padding: 0 3px 0 3px;" aria-hidden="true"></i>
+        <i class="fa fa-instagram topbar-icon" style="padding: 0 3px 0 3px; font-size: 1.3rem;
+  margin-top: 5px;" aria-hidden="true"></i>
       </a>
       <a href="https://twitter.com/stoffmagasin" target="_blank">
-        <i class="fa fa-twitter topbar-icon" style="padding: 0 15px 0 3px;" aria-hidden="true"></i>
-      </a> -->
-      <a id="search-link" onclick="" class="search-link" style="">
-        <i id="search-icon" class="cursor-pointer-hover fa fa-search topbar-icon" style="padding: 0 3px 0 3px;"></i>
+        <i class="fa fa-twitter topbar-icon" style="padding: 0 15px 0 3px; font-size: 1.3rem;
+  margin-top: 5px;" aria-hidden="true"></i>
+      </a> 
+      <a id="search-link" onclick="" class="" style="">
+        <i id="search-icon" class="cursor-pointer-hover fa fa-times topbar-icon" style="padding: 0 3px 0 3px; font-size: 1.3rem; margin-top: 5px;"></i>
       </a>
     </div>
   </div>
@@ -87,7 +90,7 @@
   </div>
   <div style="display: flex; justify-content: center; margin-top: 10%;">
     <form method="get" id="search" action=" <?php echo get_site_url( '/' ) . '/'; ?> "> 
-      <input id="input-search" autofocus style="background-color: transparent; border: none; height: 120px; width: auto; font-size: 90px; text-align: center; outline: none;" type="text" placeholder="Søk..." name="s" onfocus="this.value='';" onblur="this.value='';"
+      <input id="input-search" autofocus style="background-color: transparent; border: none; height: 120px; width: auto; font-size: 90px; text-align: center; outline: none; font-family: 'Ludacrys', serif;" type="text" placeholder="Søk..." name="s" onfocus="this.value='';" onblur="this.value='';"
       /> 
       <input type="hidden" id="searchsubmit" /> 
     </form>
