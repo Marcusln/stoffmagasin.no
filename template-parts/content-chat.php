@@ -6,7 +6,7 @@
  if ( is_single() ) {
   require(get_template_directory() . '/template-parts/single/single-landscape.php');
 }
-  else { ?>
+  else { 
 
 $postTitle = get_the_title();
 $excerpt = get_the_excerpt();
