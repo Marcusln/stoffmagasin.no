@@ -98,11 +98,13 @@ $months = array('', 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli',
  
 $month = $months[get_the_date('n')];
 
-if ( @getimagesize( $featuredUrl ) == false ) {
-  $aspectRatio = 2;
-} elseif ( has_post_thumbnail() ) {
-    list($width, $height, $type, $attr) = @getimagesize( $featuredUrl );
+$getImageSize = @getimagesize( $featuredUrl );
+
+if ( $getImageSize ) {
+
+    list($width, $height, $type, $attr) = $getImageSize;
     $aspectRatio = $width / $height;
+
 } else {
   $aspectRatio = 2;
 }
