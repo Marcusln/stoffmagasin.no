@@ -3,7 +3,7 @@
 $featuredUrl = get_the_post_thumbnail_url();
 $postTitle = get_the_title();
 $excerpt = get_the_excerpt();
-$trimmedExcerpt = wp_trim_words( $excerpt, 50,'…' );
+$trimmedExcerpt = wp_trim_words( $excerpt, 30,'…' );
 $postUrl = esc_url( get_permalink() );
 // post id -<?php the_ID(); phpend
 
