@@ -9,10 +9,10 @@
 
 $featuredUrl = get_the_post_thumbnail_url();
 
-if ( getimagesize( $featuredUrl ) == false ) {
+if ( @getimagesize( $featuredUrl ) == false ) {
 	$aspectRatio = 2;
 } elseif ( has_post_thumbnail() ) {
-    list($width, $height, $type, $attr) = getimagesize( $featuredUrl );
+    list($width, $height, $type, $attr) = @getimagesize( $featuredUrl );
     $aspectRatio = $width / $height;
 } else {
 	$aspectRatio = 2;
