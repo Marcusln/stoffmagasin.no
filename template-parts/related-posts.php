@@ -80,6 +80,8 @@ if ( $related_posts ) {
   </div>
 </div>
 
+<div id="related-posts-container">
+  
 <?php $related = new WP_Query( $query ); 
           while ( $related->have_posts() ) : $related->the_post(); 
 
@@ -96,11 +98,13 @@ $months = array('', 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli',
  
 $month = $months[get_the_date('n')];
 
-if ( has_post_thumbnail() ) {
-    list($width, $height, $type, $attr) = getimagesize( $featuredUrl );
+if ( @getimagesize( $featuredUrl ) == false ) {
+  $aspectRatio = 2;
+} elseif ( has_post_thumbnail() ) {
+    list($width, $height, $type, $attr) = @getimagesize( $featuredUrl );
     $aspectRatio = $width / $height;
 } else {
-    $aspectRatio = 2;
+  $aspectRatio = 2;
 }
 
 // these posts have drawings which is best a bit smaller than usual
@@ -119,5 +123,6 @@ if ( has_post_thumbnail() ) {
 
  endwhile; ?>
 
+</div> <!-- id="related-posts-container" -->
 
     <?php wp_reset_query(); ?>
