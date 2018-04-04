@@ -3060,6 +3060,14 @@ a .nav-item .nav-link .active .meny-this {
   overflow: hidden;
 }
 
+.bergensguide-img {
+  background-color: #f9f7f1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
 .blurry-load-container img {
   position: absolute;
   opacity: 0;
@@ -3073,11 +3081,21 @@ a .nav-item .nav-link .active .meny-this {
   transition: opacity 1000ms linear;
 }
 
-.blurry-load-container img.loaded {
+.bergensguide-img img {
+  position: relative;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  object-fit: contain;
+  max-width: 100%;
+  transition: opacity 1000ms linear;
+}
+
+.blurry-load-container img.loaded, .bergensguide-img img.loaded {
   opacity: 1;
 }
 
-.blurry-load-container .img-blur {
+.blurry-load-container .img-blur, .bergensguide-img .img-blur {
   -webkit-filter: blur(30px);
   filter: blur(30px);
   transform: scale(.9);
