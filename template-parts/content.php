@@ -7,12 +7,15 @@
  * @package Stoffu
  */
 
-if ( has_post_thumbnail() ) {
-    $featuredUrl = get_the_post_thumbnail_url();
-    list($width, $height, $type, $attr) = getimagesize( $featuredUrl );
+$featuredUrl = get_the_post_thumbnail_url();
+
+if ( @getimagesize( $featuredUrl ) == false ) {
+	$aspectRatio = 2;
+} elseif ( has_post_thumbnail() ) {
+    list($width, $height, $type, $attr) = @getimagesize( $featuredUrl );
     $aspectRatio = $width / $height;
 } else {
-    $aspectRatio = 2;
+	$aspectRatio = 2;
 }
 
 
