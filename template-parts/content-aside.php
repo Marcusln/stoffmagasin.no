@@ -14,7 +14,7 @@
 $postTitle = get_the_title();
 $excerpt = get_the_excerpt();
 $postUrl = esc_url( get_permalink() );
-$trimmedExcerpt = wp_trim_words( $excerpt, 50,'…' );
+$trimmedExcerpt = wp_trim_words( $excerpt, 30,'…' );
 ?>
 
 <script>
