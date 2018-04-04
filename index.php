@@ -17,12 +17,15 @@
  *
  */
 
-if ( has_post_thumbnail() ) {
-    $featuredUrl = get_the_post_thumbnail_url();
-    list($width, $height, $type, $attr) = getimagesize( $featuredUrl );
+$getImageSize = @getimagesize( $featuredUrl );
+
+if ( $getImageSize ) {
+
+    list($width, $height, $type, $attr) = $getImageSize;
     $aspectRatio = $width / $height;
+
 } else {
-    $aspectRatio = 2;
+  $aspectRatio = 2;
 }
 
 if ( isset( $_GET['utgave'] ) ) {
