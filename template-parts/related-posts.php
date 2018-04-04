@@ -6,12 +6,16 @@
 
 $prevPost = get_adjacent_post(false, '', true); // previous means older posts. next posts will throw an error for newest article
 $prevPostUrl = get_permalink($prevPost);
-$prevThumbnail = get_the_post_thumbnail_url($prevPost->ID, 'medium');
+$prevThumbnail = get_the_post_thumbnail_url($prevPost->ID, array(600,999) );
+$prevExcerpt = $prevPost->post_excerpt;
+$prevExcerptTrimmed = wp_trim_words( $prevExcerpt, 30,'…' );
+
 $featuredUrl = get_the_post_thumbnail_url();
 $postTitle = get_the_title();
 $excerpt = get_the_excerpt();
 $trimmedExcerpt = wp_trim_words( $excerpt, 30,'…' );
 $postUrl = esc_url( get_permalink() );
+
 $dateDay = get_the_date('j');
 $dateMonth = get_the_date('F');
 $dateYear = get_the_date('Y');
@@ -21,28 +25,20 @@ $months = array('', 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli',
 $month = $months[get_the_date('n')];
 ?>
 
-<div class="related-posts-container hidden-md-up frontpage-margin" style="display: flex; align-items: center;">
-  <div id="mest-lest" class="mest-lest">
+<div class="hidden-md-up frontpage-margin" style="">
+  <div id="neste-artikkel" class="mest-lest">
     Neste artikkel
   </div>
 </div>
 
 <article class="hidden-md-up frontpage-margin feed-item component portrait feed-box-border" style="margin-top: 30px; margin-bottom: 30px;">
-<a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $postUrl; ?>" style="">
+<a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $prevPostUrl; ?>" style="">
    <div class="feed-image-container" style="">
-      <img style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(600,999) ); ?>">
+      <img style="" class="feed-image inline img-fluid" src="<?php echo $prevThumbnail; ?>">
   </div>
   <div class="feed-text-container" style="" >
-    <span class="graytext kategori">
-      <?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?><br />
-    </span>
-        <span class="nestensvart overskrift"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
-        <span class="graytext byline"><?php echo $trimmedExcerpt; ?></span>
-        <?php if ( get_field( 'journalist' ) ) {
-          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'>&mdash; " . get_field( 'journalist' ) . "</span>";
-        }
-          echo "<span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'><br />" . $dateDay . ". " . $month . " " . $dateYear . "</span>";
-         ?>
+        <span class="nestensvart overskrift"><?php echo $prevPost->post_title ?></span><br style="line-height: 2vh;">
+        <span class="graytext byline"><?php echo $prevExcerptTrimmed ?></span>
   </div>
 </a>
 </article>
@@ -78,15 +74,11 @@ if ( $related_posts ) {
 ?>
 
 
-<div class="related-posts-container frontpage-margin " style=" padding-left: 37px; display: flex; margin-bottom: 0;">
+<div class="related-posts-container frontpage-margin " style=" padding-left: 37px; display: flex; margin-bottom: 0; margin-top: 50px;">
   <div id="mest-lest" class="mest-lest">
     Mer lesestoff
   </div>
 </div>
-
-
-
-
 
 <?php $related = new WP_Query( $query ); 
           while ( $related->have_posts() ) : $related->the_post(); 
@@ -103,29 +95,29 @@ $dateYear = get_the_date('Y');
 $months = array('', 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember');
  
 $month = $months[get_the_date('n')];
-?>
 
-<article class="frontpage-margin feed-item component portrait feed-box-border" style="margin-top: 30px; margin-bottom: 30px;">
-<a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $postUrl; ?>" style="">
-   <div class="feed-image-container" style="">
-      <img style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(600,999) ); ?>">
-  </div>
-  <div class="feed-text-container" style="" >
-    <span class="graytext kategori">
-      <?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?><br />
-    </span>
-        <span class="nestensvart overskrift"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
-        <span class="graytext byline"><?php echo $trimmedExcerpt; ?></span>
-        <?php if ( get_field( 'journalist' ) ) {
-          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'>&mdash; " . get_field( 'journalist' ) . "</span>";
-        }
-          echo "<span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'><br />" . $dateDay . ". " . $month . " " . $dateYear . "</span>";
-         ?>
-  </div>
-</a>
-</article>
+if ( has_post_thumbnail() ) {
+    list($width, $height, $type, $attr) = getimagesize( $featuredUrl );
+    $aspectRatio = $width / $height;
+} else {
+    $aspectRatio = 2;
+}
 
-<?php endwhile; ?>
+// these posts have drawings which is best a bit smaller than usual
+                if ( in_category( 'bergen-revels' ) or in_category( 'quiz' ) or in_category( 'leder' ) ) {
+                    require( get_template_directory() . '/template-parts/force-smaller-img.php' );
+                // if post format is standard, get_post_format actually returns null (!). Hence we want to require content-standard.php
+                } elseif ( empty( get_post_format() ) ) {
+                    require( get_template_directory() . '/template-parts/content-standard.php' );
+                // fetch aspect ratio and give wide layout for wide pictures
+                } elseif ( $aspectRatio > 3 ) {
+                    require( get_template_directory() . '/template-parts/wide.php' );
+                // fallback to content-standard.php
+                } else {
+                    require( get_template_directory() . '/template-parts/content-standard.php' );
+                }
+
+ endwhile; ?>
 
 
     <?php wp_reset_query(); ?>
