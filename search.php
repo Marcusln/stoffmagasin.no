@@ -20,12 +20,15 @@ get_search_form();
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
-if ( has_post_thumbnail() ) {
-    $featuredUrl = get_the_post_thumbnail_url();
-    list($width, $height, $type, $attr) = getimagesize( $featuredUrl );
+$getImageSize = @getimagesize( $featuredUrl );
+
+if ( $getImageSize ) {
+	$featuredUrl = get_the_post_thumbnail_url();
+    list($width, $height, $type, $attr) = $getImageSize;
     $aspectRatio = $width / $height;
+
 } else {
-    $aspectRatio = 2;
+  $aspectRatio = 2;
 }
 
 				/**
