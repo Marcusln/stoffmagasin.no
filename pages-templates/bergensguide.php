@@ -54,6 +54,8 @@ Template Name: Bergensguide
 
 <body>
 
+
+
 <!-- FULLSCREEN SEARCH -->
 
   <div id="fullscreenSearch" class="initiallyHidden hidden-md-down" style="width: 100vw; height: 100vh; position: fixed; background-color: #f9f7f1; z-index: 1001;">
@@ -164,11 +166,53 @@ $( document ).on( 'keydown', function ( e ) {
 
 </script>
 
+<?php while ( have_posts() ) : the_post(); ?>
+
 <!-- FEATURED IMAGE -->
 
-<div style="width: 100%; height: auto;">
-	<?php the_post_thumbnail( 'full' ); ?>
+<div class="bergensguide-img">
+  <img class="image-blur" style="position: absolute; width: 100%; height: auto;" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>">
 </div>
+
+
+
+
+<script>
+  /* https://github.com/tushariscoolster/blurry-image-load
+  Når du velger post thumbnail, velg resolution fra array, lag array i egen variabel elns, ta høyden og gang med aspect ratio for å få riktig aspect ratio på thumbnail */
+  (function ($) {
+
+    $.fn.blurryLoad = function (options) {
+
+        var parentContainer = $(this).parent(),
+            imageContainer = $(this)
+        
+        
+        imageContainer.addClass('img-blur')
+
+        // 1: load small image and show it
+        var img = new Image();
+        img.src = imageContainer.attr('src');
+        img.onload = function () {
+            imageContainer.addClass('loaded');
+        };
+
+        // 2: load large image
+        var imgLarge = new Image();
+        imgLarge.src = $(this).attr('data-large');
+        imgLarge.onload = function () {
+             imgLarge.classList.add('loaded');
+        };
+        parentContainer.append(imgLarge)
+       
+    };
+
+}(jQuery));
+
+   $('.image-blur').blurryLoad()
+
+   
+</script>
 
 <!-- Content -->
 
@@ -193,11 +237,15 @@ $( document ).on( 'keydown', function ( e ) {
 		</div>
 
 		<div id="article-content" class="" style="max-width: calc(100% - 50px); font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
-			<?php the_content() ?>
+      
+			 <?php the_content() ?>
 		</div>
 	</div>
 	</div>
 </article>
+
+<?php endwhile;
+       wp_reset_query(); ?>
 
 
 <?php get_footer() ?>
