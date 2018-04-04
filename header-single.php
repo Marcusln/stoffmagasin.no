@@ -52,7 +52,7 @@
 
 <!-- FULLSCREEN SEARCH -->
 
-  <div id="fullscreenSearch" class="initiallyHidden hidden-md-down" style="width: 100vw; height: 100vh; position: fixed; background-color: #f9f7f1; z-index: 1001;">
+<div id="fullscreenSearch" class="initiallyHidden hidden-md-down" style="width: 100vw; height: 100vh; position: fixed; background-color: #f9f7f1; z-index: 1001;">
   <div id="topbar" class="hidden-md-down bg-color-paper fixed-top" style="box-shadow: 0 3px 4px -4px #7e6d35; border-top: 0px solid black; border-bottom: 1px solid black; height: 50px; opacity: 0.98; display: flex; align-items: center; justify-content: space-between; padding: 0 20px 0 20px; width: 100vw; z-index: 1000;">
     <div style="">
       <a href="/index.php"><img id="headerLogo" src="/wp-content/uploads/2017/04/stoff.png" style="height: 35px; z-index: 1001; filter: none; padding: 5px;"></a>
@@ -77,11 +77,11 @@
         <i id="hamburger-icon" class="fa fa-bars topbar-icon" style="padding: 0 3px 0 3px; font-size: 1.3rem; margin-top: 5px;"></i>
       </a>
     </div>
-</div>
+  </div>
   <div style="height: 20vh;"></div>
   <div style="display: flex; justify-content: center; align-self: center; margin-top: 10%;">
     <form  method="get" id="search" action="<?php echo get_site_url( "/" ) . "/"; ?>"> 
-      <input autofocus style="background-color: transparent; border: none; height: 120px; width: auto; font-size: 90px; text-align: center; outline: none;" type="text" placeholder="Søk..." name="s" id="s" onblur="if (this.value == "") {
+      <input autofocus style="background-color: transparent; border: none; height: 120px; width: auto; font-size: 90px; text-align: center; outline: none; font-family: 'Ludacrys', serif;" type="text" placeholder="Søk..." name="s" id="s" onblur="if (this.value == "") {
       this.value = "<?php the_search_query(); ?>"
       ;}
       /> 
