@@ -166,11 +166,12 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 
 $(window).scroll(function() {
     var top_of_element = $("#article-content").offset().top;
-    var bottom_of_element = $("#article-content").offset().top + $("#article-content").outerHeight();
+    var bottom_of_article = $("#article-content").offset().top + $("#article-content").outerHeight();
+    var bottom_of_related_posts = $("#related-posts-container").offset().top + $("#related-posts-container").outerHeight();
     var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
     var top_of_screen = $(window).scrollTop();
 
-    if (bottom_of_element < bottom_of_screen) {
+    if (bottom_of_article < bottom_of_screen && bottom_of_related_posts > bottom_of_screen) {
         $('.nav-issue').removeClass('hide');
     	} else {
         $('.nav-issue').addClass('hide');
