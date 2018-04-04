@@ -344,4 +344,4 @@ return $urls;
 }
 
 // default timeout is 60 sec, nobody has time for that so change to 5 sec. Used for aspect ratio calculations in content.php, index.php etc
-ini_set('getimagesize', 5);
+ini_set('getimagesize', 1);
