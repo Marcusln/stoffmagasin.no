@@ -3066,6 +3066,13 @@ a .nav-item .nav-link .active .meny-this {
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 991.98px) {
+  .bergensguide-img {
+    margin-bottom: 15px;
+  }
 }
 
 .blurry-load-container img {
@@ -3091,6 +3098,12 @@ a .nav-item .nav-link .active .meny-this {
   transition: opacity 1000ms linear;
 }
 
+@media (max-width: 991.98px) {
+  .bergensguide-img img {
+    margin-top: 50px;
+  }
+}
+
 .blurry-load-container img.loaded, .bergensguide-img img.loaded {
   opacity: 1;
 }
@@ -3107,9 +3120,16 @@ a .nav-item .nav-link .active .meny-this {
   filter: blur(30px);
   /* transform: scale(.9);
   -webkit-transform: scale(.9); */
+  margin-top: 10px;
 }
 
 #bergensguide-text h4 {
   font-family: 'LudacrysStencil', serif !important;
   font-size: 50px !important;
+}
+
+@media (max-width: 991.98px) {
+  #bergensguide-text h4 {
+    font-size: 26px !important;
+  }
 }
