@@ -1669,7 +1669,6 @@ strong i {
 
 .overskrift-cover {
   font-size: 55px;
-  font-size: 6vh;
   font-family: 'Ludacrys';
 }
 
@@ -2890,19 +2889,21 @@ display: block;
   top: -20px;
   left: 0;
   }
+}
 
+  @media (max-width: 991px) {
 
     #content-standard {
       padding: 15px 10px !important;
       background-color: #f9f7f1;
+      box-shadow: none;
   }
 
   #cover {
       padding-bottom: 15px;
       background-color: #f9f7f1;
+      box-shadow: none;
     }
-
-    
 
     #content-chat {
       padding: 15px 10px !important;
@@ -2924,7 +2925,6 @@ display: block;
       border-left: 1px solid #f7f5ed;
       border-bottom: 3px solid #f0ebdb;
       border-right: 2px solid #f0ebdb;
-      padding: 15px 10px !important;
   }
 
     .feed-image-container {
@@ -2934,7 +2934,6 @@ display: block;
 
     #cover .feed-text-container {
       border: 0 !important;
-      padding: 15px 20px !important;
   }
 
     #cover .feed-image-container {
@@ -3069,7 +3068,7 @@ a .nav-item .nav-link .active .meny-this {
   margin-bottom: 100px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 991px) {
   .bergensguide-img {
     margin-bottom: 15px;
   }
@@ -3098,7 +3097,7 @@ a .nav-item .nav-link .active .meny-this {
   transition: opacity 1000ms linear;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 991px) {
   .bergensguide-img img {
     margin-top: 50px;
   }
@@ -3128,7 +3127,7 @@ a .nav-item .nav-link .active .meny-this {
   font-size: 50px !important;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 991px) {
   #bergensguide-text h4 {
     font-family: 'Ludacrys', serif !important;
     font-size: 26px !important;
