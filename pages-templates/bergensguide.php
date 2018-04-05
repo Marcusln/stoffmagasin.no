@@ -86,10 +86,8 @@ Template Name: Bergensguide
 </div>
   <div style="height: 20vh;"></div>
   <div style="display: flex; justify-content: center; align-self: center; margin-top: 10%;">
-    <form  method="get" id="search" action="<?php echo get_site_url( "/" ) . "/"; ?>"> 
-      <input autofocus style="background-color: transparent; border: none; height: 120px; width: auto; font-size: 90px; text-align: center; outline: none; font-family: 'Ludacrys', serif;" type="text" placeholder="Søk..." name="s" id="s" onblur="if (this.value == "") {
-      this.value = "<?php the_search_query(); ?>"
-      ;}
+    <form method="get" id="search" action=" <?php echo get_site_url( '/' ) . '/'; ?> "> 
+      <input id="input-search" autofocus style="background-color: transparent; border: none; height: 120px; width: auto; font-size: 90px; text-align: center; outline: none; font-family: 'Ludacrys', serif;" type="text" placeholder="Søk..." name="s" onfocus="this.value='';" onblur="this.value='';"
       /> 
       <input type="hidden" id="searchsubmit" /> 
     </form>
@@ -137,13 +135,14 @@ min-height: calc(100vh - 120px);
  -->
 
 <script>
-      $(function() {
+$(function() {
   $('#topbar .fa-search').click(function(e) {
-    e.stopPropagation()
-    $('#fullscreenSearch').fadeIn('fast');
-    $('#search-icon').addClass('fa-times');
-    $('#search-icon').removeClass('fa-search');
-    // $('#s').focus();
+      e.stopPropagation()
+      $('#fullscreenSearch').fadeIn('fast');
+      $('#search-icon').addClass('fa-times');
+      $('#search-icon').css({'font-size' : '30px', 'padding-right' : '25px', 'color' : 'black'});
+      $('#search-icon').removeClass('fa-search');
+      $('#input-search').focus();
     });
   });
 
