@@ -115,9 +115,6 @@ if ( $getImageSize ) {
                 // if post format is standard, get_post_format actually returns null (!). Hence we want to require content-standard.php
                 } elseif ( empty( get_post_format() ) ) {
                     require( get_template_directory() . '/template-parts/content-standard.php' );
-                // fetch aspect ratio and give wide layout for wide pictures
-                } elseif ( $aspectRatio > 3 ) {
-                    require( get_template_directory() . '/template-parts/wide.php' );
                 // fallback to content-standard.php
                 } else {
                     require( get_template_directory() . '/template-parts/content-standard.php' );
