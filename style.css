@@ -3130,6 +3130,7 @@ a .nav-item .nav-link .active .meny-this {
 
 @media (max-width: 991.98px) {
   #bergensguide-text h4 {
+    font-family: 'Ludacrys', serif !important;
     font-size: 26px !important;
   }
 }
