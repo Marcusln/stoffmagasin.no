@@ -20,7 +20,7 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 <!-- TEKST -->
 <!-- Litt lysere bg-color: #FCFBF8 -->
-<article id="textbox-article" class="container hidden-md-down" class="" style="margin-left: 15vw; margin-top: 50px; width: 800px; border-left: 1px solid darkgray; position: relative;">
+<article id="textbox-article" class="container hidden-md-down" class="" style="margin-left: 15vw; margin-top: 100px; width: 800px; border-left: 1px solid darkgray; position: relative;">
 	<span class="gray" style="font-family: 'Ludacrys'; font-size: 18px; transform: rotate(-90deg); position: absolute; left: -65px; top: 50; letter-spacing: 3px;">
 		<?php echo $dateDay . '.' . $dateMonth . '.' . $dateYear ?>
 	</span>
@@ -124,7 +124,7 @@ $(window).scroll(function() {
 
 <!-- Mobile article -->
 
-<article id="textbox-article" class="single-textbox hidden-lg-up">
+<article id="textbox-article" class="single-textbox hidden-lg-up" style="margin-top: 100px;">
 	<div id="title-intro" style="padding: 15px 0;">
 		<span class="graytext kategori" style="font-size: 14px;">
           		<?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?>

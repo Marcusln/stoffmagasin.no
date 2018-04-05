@@ -16,6 +16,17 @@ $dateMonth = get_the_date('m');
 $dateYear = get_the_date('Y');
 $dateMonthNoZero = get_the_date( 'n' );
 
+$getImageSize = @getimagesize( $featuredUrl );
+
+if ( $getImageSize ) {
+
+    list($width, $height, $type, $attr) = $getImageSize;
+    $aspectRatio = $width / $height;
+
+} else {
+  $aspectRatio = 2;
+}
+
 // bakgrunnsfarge overskrift osv: background-color: rgb(17,17,17);
 ?>
 <!--width: calc(100% - 20vw); height: calc(100% - 50px); display: flex;  margin-top: 25px; margin-left: 25px; margin-left: auto; margin-right: auto;-->
@@ -36,7 +47,7 @@ $dateMonthNoZero = get_the_date( 'n' );
 				<span class="graytext kategori">
             		<?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?>
         		</span><br />
-        	<?php the_title(); ?>
+        	<?php the_title(); ?><br /><?php echo $aspectRatio; ?>
         	</span>
 		</div>
 	</div>
