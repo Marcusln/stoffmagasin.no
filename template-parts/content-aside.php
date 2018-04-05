@@ -73,7 +73,7 @@ $month = $months[get_the_date('n')];
         <span class="" style="background-color: black !important; font-size: 36px; font-family: 'Ludacrys', serif"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
         <span style="background-color: black !important; color: white !important; font-family: 'Roboto', sans-serif; font-size: 18px;" class=""><?php echo $trimmedExcerpt; ?></span>
         <?php if ( get_field( 'journalist' ) ) {
-          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'>&mdash; " . get_field( 'journalist' ) . "</span>";
+          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100; font-size: 10px;'>&mdash; " . get_field( 'journalist' ) . "</span>";
         } 
          ?>
   </div>
