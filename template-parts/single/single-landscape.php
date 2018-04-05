@@ -17,17 +17,6 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 // bakgrunnsfarge overskrift osv: background-color: rgb(17,17,17);
 
-$getImageSize = @getimagesize( $featuredUrl );
-
-if ( $getImageSize ) {
-
-    list($width, $height, $type, $attr) = $getImageSize;
-    $aspectRatio = $width / $height;
-
-} else {
-  $aspectRatio = 2;
-}
-
 ?>
 
 <!-- FEATURED IMAGE -->
@@ -37,8 +26,7 @@ if ( $getImageSize ) {
 <header style="width: 100%; height: 100%; padding-top: 54px; max-width: 100%;">
 	<div id="" style="width: calc(100%); height: calc(100% - 50px); display: flex;  margin-top: 25px; padding-left: 50px; padding-right: 50px;">
 		<div class="blurry-load-container" style="flex: 1;">
-			<img class="featured-img image-blur" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>"  style="height: 100%; object-fit: contain;"><br />
-			<?php echo $aspectRatio; ?>
+			<img class="featured-img image-blur" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>"  style="height: 100%; object-fit: contain;">
 		</div>
 	</div>
 </header>
