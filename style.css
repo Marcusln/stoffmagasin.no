@@ -11,7 +11,7 @@ Lag oversikt over z-index...
 
 */
 
-#article-content, #article-content span {
+#article-content, #article-content span, #article-content p, #bergensguide-text p {
   font-weight: 200 !important;
 }
 
@@ -3100,4 +3100,9 @@ a .nav-item .nav-link .active .meny-this {
   filter: blur(30px);
   transform: scale(.9);
   -webkit-transform: scale(.9);
+}
+
+#bergensguide-text h4 {
+  font-family: 'LudacrysStencil', serif !important;
+  font-size: 50px !important;
 }
