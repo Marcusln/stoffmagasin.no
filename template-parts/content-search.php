@@ -5,7 +5,9 @@
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package Stoffu
+ * not in use
  */
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
