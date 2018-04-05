@@ -42,7 +42,7 @@ $month = $months[get_the_date('n')];
 <article id="cover" class="hidden-md-down feed-item component cover feed-box-border frontpage-margin" style="background-color: black; box-shadow: 3px 5px #f0ebdb;">
 <a class="feed-item component cover feed-box-border frontpage-margin" href="<?php echo $postUrl; ?>" style="text-decoration: none; color: black; background-color: black;">
   <div class="feed-image-container" style="background-color: black !important; max-height: 70vh;">
-    <img style="" class="feed-image inline img-fluid" style="" src="<?php the_post_thumbnail_url( array(900,1400) ); ?>">
+    <img style="" class="feed-image inline img-fluid" style="" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>">
   </div>
   <div class="feed-text-container" style="background-color: black;" >
     <span class="kategori" style="padding-bottom: 1em; color: white;">FORSIDESTOFF</span><br />
@@ -63,7 +63,7 @@ $month = $months[get_the_date('n')];
 <article id="cover"  class="hidden-lg-up feed-item component portrait" style="margin-top: -20px;">
 <a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $postUrl; ?>" style="">
    <div class="feed-image-container" style="">
-      <img id="cover-img" style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(2000, 600) ); ?>">
+      <img id="cover-img" style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>">
   </div>
   <div class="feed-text-container" style="background-color: black !important; color: white !important; padding: 15px 25px 15px 25px;" >
     <span class=" kategori" style="background-color: black !important; font-size: 12px !important; font-weight: 100;
