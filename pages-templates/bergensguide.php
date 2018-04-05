@@ -171,7 +171,7 @@ $( document ).on( 'keydown', function ( e ) {
 
 <!-- FEATURED IMAGE -->
 
-<div class="bergensguide-img" style="margin-bottom: 100px;">
+<div class="bergensguide-img" style="">
   <img class="image-blur" style="position: absolute; width: 100%; height: auto;" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>">
 </div>
 
@@ -236,20 +236,22 @@ $( document ).on( 'keydown', function ( e ) {
 	</div>
 </article>
 
+<!-- mobile version -->
+
 <article id="textbox-article" class="single-textbox hidden-lg-up">
-  <div id="title-intro" style="padding: 15px 0;">
+  <div id="title-intro" style="">
   
-    <span class="overskrift-single" style="font-family: 'Ludacrys'; font-size: 33px; line-height: 1.5;">
+    <span class="overskrift-single" style="font-family: 'Ludacrys'; font-size: 50px; line-height: 1;">
       <?php echo get_the_title(); ?>
     </span><br /><br />
 
     <!-- lead paragraph fetched from h4 tags via jquery script below. or else insert excerpt-->
-        <span id='ingress' style="font-family: 'Arapey', serif; font-size: 20px; font-weight: 400; line-height: 26px; margin-bottom: 0 !important;">
+        <span id='ingress' style="font-family: 'Arapey', serif; font-size: 26px; font-weight: 400; line-height: 26px; margin-bottom: 0 !important;">
           Alle illustrasjoner ved Ida Neverdahl
         </span>
   </div>
 
-  <div id="article-content" class="" style=" font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
+  <div id="bergensguide-text" class="bergensguide" style=" font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
     <?php the_content() ?>
   </div>
 </article>
