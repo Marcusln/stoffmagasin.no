@@ -52,9 +52,9 @@ $month = $months[get_the_date('n')];
         <span class="" style="font-size: 26px; font-family: 'Ludacrys', serif"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
         <span style="font-size: 16px; line-height: 1.25;" class=""><?php echo $trimmedExcerpt; ?></span>
         <?php if ( get_field( 'journalist' ) ) {
-          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'>&mdash; " . get_field( 'journalist' ) . ", " . $dateDay . ". " . $month . " " . $dateYear . "</span>";
+          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100; font-size: 10px;'>&mdash; " . get_field( 'journalist' ) . ", " . $dateDay . ". " . $month . " " . $dateYear . "</span>";
         } else {
-          echo "<span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'><br />" . $dateDay . ". " . $month . " " . $dateYear . "</span>";
+          echo "<span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100; font-size: 10px;'><br />" . $dateDay . ". " . $month . " " . $dateYear . "</span>";
         }
          ?>
   </div>
