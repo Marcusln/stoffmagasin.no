@@ -15,6 +15,14 @@ $postTitle = get_the_title();
 $excerpt = get_the_excerpt();
 $postUrl = esc_url( get_permalink() );
 $trimmedExcerpt = wp_trim_words( $excerpt, 30,'…' );
+
+$dateDay = get_the_date('j');
+$dateMonth = get_the_date('F');
+$dateYear = get_the_date('Y');
+
+$months = array('', 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli', 'august', 'september', 'oktober', 'november', 'desember');
+ 
+$month = $months[get_the_date('n')];
 ?>
 
 <script>
@@ -41,10 +49,8 @@ $trimmedExcerpt = wp_trim_words( $excerpt, 30,'…' );
         <span class="overskrift-cover hyphenate" style="color: white;"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
         <span class="byline-cover" style="color: white; font-family: 'Roboto', sans-serif;"><?php echo $excerpt; ?></span><br />
         <?php if ( get_field( 'journalist' ) ) {
-          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'>&mdash; " . get_field( 'journalist' ) . ", " . $dateDay . ". " . $month . " " . $dateYear . "</span>";
-        } else {
-          echo "<span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'><br />" . $dateDay . ". " . $month . " " . $dateYear . "</span>";
-        }
+          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'>&mdash; " . get_field( 'journalist' ) . "</span>";
+        } 
          ?>
   </div>
 </a>
@@ -67,8 +73,9 @@ $trimmedExcerpt = wp_trim_words( $excerpt, 30,'…' );
         <span class="" style="background-color: black !important; font-size: 36px; font-family: 'Ludacrys', serif"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
         <span style="background-color: black !important; color: white !important; font-family: 'Roboto', sans-serif; font-size: 18px;" class=""><?php echo $trimmedExcerpt; ?></span>
         <?php if ( get_field( 'journalist' ) ) {
-          echo "<br /><span style='background-color: black !important; font-style: italic; color: rgb(128, 128, 128); font-weight: 100; font-size: 12px;'>&mdash;" . ' ' . get_field( 'journalist' ) . "</span>";
-        } ?>
+          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'>&mdash; " . get_field( 'journalist' ) . "</span>";
+        } 
+         ?>
   </div>
 </a>
 </article>
