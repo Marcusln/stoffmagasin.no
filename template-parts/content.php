@@ -30,6 +30,9 @@ if ( $getImageSize ) {
 				require(get_template_directory() . '/template-parts/single/single-portrait.php' );
 			} elseif ( get_field( 'layout' ) == 'landskap' or 'chat' == get_post_format() ) { // 
 				require( get_template_directory() . '/template-parts/single/single-landscape.php' );
+			// if an article doesnt have a featured img
+			} elseif ( !has_post_thumbnail() ) { // 
+				require( get_template_directory() . '/template-parts/single/single-noimg.php' );
 			// fallback on landscape because the template fits all articles ... well dont really know why but why not
 			} elseif ( $aspectRatio <= 1.08 ) { // 
 				require(get_template_directory() . '/template-parts/single/single-portrait.php' );
