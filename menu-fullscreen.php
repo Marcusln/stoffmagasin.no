@@ -54,6 +54,7 @@
           Mer lesestoff
         </div>
       <div>
+        <a class="item-lesestoff" style="font-family: 'Ludacrys', serif; font-size: 36px; color: white; line-height: 60px;" href="/?page_id=6473">Bergensguide</a>
         <a class="item-lesestoff" style="font-family: 'Ludacrys', serif; font-size: 36px; color: white; line-height: 60px;" href="/samfunn/?kategori=quiz">Quiz</a>
         <a class="item-lesestoff" style="display: none; font-family: 'Ludacrys', serif; font-size: 36px; color: white; line-height: 60px;" href="/kultur/?kategori=bergen-revels">Intervjuer</a>
         <a class="item-lesestoff" style="font-family: 'Ludacrys', serif; font-size: 36px; color: white; line-height: 60px;" href="/kultur/?kategori=posterboy">Posterboy</a>
