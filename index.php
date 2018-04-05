@@ -17,17 +17,6 @@
  *
  */
 
-$getImageSize = @getimagesize( $featuredUrl );
-
-if ( $getImageSize ) {
-
-    list($width, $height, $type, $attr) = $getImageSize;
-    $aspectRatio = $width / $height;
-
-} else {
-  $aspectRatio = 2;
-}
-
 if ( isset( $_GET['utgave'] ) ) {
   $currentIssue = $_GET['utgave'];
 } else {
@@ -89,7 +78,16 @@ get_header();
 
             while ($the_query_nonsticky->have_posts()) : $the_query_nonsticky->the_post(); 
 
+$getImageSize = @getimagesize( $featuredUrl );
 
+if ( $getImageSize ) {
+
+    list($width, $height, $type, $attr) = $getImageSize;
+    $aspectRatio = $width / $height;
+
+} else {
+  $aspectRatio = 2;
+}
 
                 
                 // these posts have drawings which is best a bit smaller than usual
@@ -98,46 +96,22 @@ get_header();
                 // if post format is standard, get_post_format actually returns null (!). Hence we want to require content-standard.php
                 } elseif ( empty( get_post_format() ) ) {
                     require( get_template_directory() . '/template-parts/content-standard.php' );
-                // fetch aspect ratio and give wide layout for wide pictures
-                } elseif ( $aspectRatio > 3 ) {
-                    require( get_template_directory() . '/template-parts/content-chat.php' );
                 // else we can fetch template file for the format, e.g. content-aside.php for cover (renamed in functions.php)
-                } else {
+                }  else {
                     get_template_part('template-parts/content', get_post_format() ); 
                 }
 
             endwhile;
 
             }
+/*
 
-// putte inn #endloop div her hvis jeg får jquery til helvete
-/* helvete hva skal jeg bruke denne til nå haha
-                echo "
-
-        <nav class='nav-issue ' style='display: none; content: ''; position: absolute; text-align: center; display: block;
-        vertical-align: baseline; z-index: -1;'>
-            <a style=' transform: rotate(90deg) translateX(50%); left: 87vw; display: block; position: fixed; top: calc(50% - 175px); font-weight: 400; letter-spacing: .18417em; text-transform: uppercase; margin: 0 0 0 0; padding: 0; border: 0; white-space: nowrap; font-size: 26px; font-family: 'Roboto', sans-serif; vertical-align: baseline; text-align: center;' href='http://www.vg.no'>Gå til<br />Forrige utgave
-            </a>
-        </nav>
-
-                ";
-
-?>
-
-                <script>
-
-$(window).scroll(function(){
-        var elementoffset = $('#logoMenu').offset().top; // <<< change #elementhere with your element you want the scroll to make action when reach it
-        // var interval = setInterval(function() {                         
-        if ($(this).scrollTop() > 1500) { // forbi siste saker
-            $('.nav-issue').fadeIn('slow');
-        } else {
-            $(".nav-issue").removeAttr('style').css("display","none");
-        }
-     });
-</script>
-
-<?php */
+This doesnt work because it only gets the aspect ratio of first post. Maybe not 100% correct implementation of the query loop
+elseif ( $aspectRatio > 2.6 ) {
+                    require( get_template_directory() . '/template-parts/content-chat.php' );
+                // if post format is standard, get_post_format actually returns null (!). Hence we want to require content-standard.php
+                }
+*/
         endif; 
     wp_reset_query();
 
