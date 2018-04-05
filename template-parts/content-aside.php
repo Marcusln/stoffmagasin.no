@@ -60,7 +60,7 @@ $month = $months[get_the_date('n')];
 <!--
   ********************** MOBILE ***************** -->
 
-<article id="cover"  class="hidden-lg-up feed-item component portrait" style="">
+<article id="cover"  class="hidden-lg-up feed-item component portrait" style="margin-top: -20px;">
 <a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $postUrl; ?>" style="">
    <div class="feed-image-container" style="">
       <img id="cover-img" style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(2000, 600) ); ?>">
