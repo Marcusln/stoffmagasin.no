@@ -16,7 +16,7 @@ $months = array('', 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli',
 $month = $months[get_the_date('n')];
 ?>
 
-<article id="force-smaller-img" class="frontpage-margin feed-item component portrait feed-box-border hidden-md-down" style="margin-top: 30px; margin-bottom: 30px;">
+<article id="content-standard" class="frontpage-margin feed-item component portrait feed-box-border hidden-sm-down" style="margin-top: 30px; margin-bottom: 30px;">
 <a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $postUrl; ?>" style="">
    <div class="feed-image-container" style="">
       <img style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(600,999) ); ?>">
@@ -38,7 +38,7 @@ $month = $months[get_the_date('n')];
 </article>
 
 <!-- ************ MOBILE -->
-<article id="force-smaller-img" class="hidden-lg-up feed-item component portrait" style="">
+<article id="content-standard" class="hidden-md-up feed-item component portrait" style="">
 <a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $postUrl; ?>" style="">
    <div class="feed-image-container" style="">
       <img style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(600,999) ); ?>">
@@ -51,10 +51,11 @@ $month = $months[get_the_date('n')];
         <span class="" style="font-size: 26px; font-family: 'Ludacrys', serif"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
         <span style="font-size: 16px; line-height: 1.25;" class=""><?php echo $trimmedExcerpt; ?></span>
         <?php if ( get_field( 'journalist' ) ) {
-          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100; font-size: 12px;'>&mdash;" . ' ' . get_field( 'journalist' ) . "</span>";
-        }            echo "<span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100; font-size: 10px;'><br />" . $dateDay . ". " . $month . " " . $dateYear . "</span>";
-
-?>
+          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'>&mdash; " . get_field( 'journalist' ) . ", " . $dateDay . ". " . $month . " " . $dateYear . "</span>";
+        } else {
+          echo "<span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'><br />" . $dateDay . ". " . $month . " " . $dateYear . "</span>";
+        }
+         ?>
   </div>
 </a>
 </article>
