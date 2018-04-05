@@ -3095,11 +3095,18 @@ a .nav-item .nav-link .active .meny-this {
   opacity: 1;
 }
 
-.blurry-load-container .img-blur, .bergensguide-img .img-blur {
+.blurry-load-container .img-blur {
   -webkit-filter: blur(30px);
   filter: blur(30px);
   transform: scale(.9);
   -webkit-transform: scale(.9);
+}
+
+.bergensguide-img .img-blur {
+  -webkit-filter: blur(30px);
+  filter: blur(30px);
+  /* transform: scale(.9);
+  -webkit-transform: scale(.9); */
 }
 
 #bergensguide-text h4 {
