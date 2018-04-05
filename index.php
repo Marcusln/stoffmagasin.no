@@ -149,7 +149,7 @@ $(window).scroll(function(){
                 <span class="nestensvart" style="white-space: nowrap; ">Gå til utgave <div style="font-family: 'Ludacrys', serif; display: inline;"> #</div><?php echo $previousIssue; ?></span>
           </div>
            <div class="feed-image-container" style="background-color: #f9f7f1 !important; ">
-              <img style="" class="feed-image inline img-fluid issue-nav-img" src="/wp-content/uploads/forsider/utgave<?php echo $previousIssue ?>-600x839.jpg">
+              <img style="" class="feed-image inline img-fluid issue-nav-img" src="/wp-content/uploads/forsider/utgave<?php echo $previousIssue ?>.jpg">
           </div>
         </a>
         </div>
