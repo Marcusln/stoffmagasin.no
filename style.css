@@ -2890,3 +2890,12 @@ a .nav-item .nav-link .active .meny-this {
 #topbar a.topbar-cat:hover {
   color: gray !important;
 }
+
+.topbar-border {
+  border-bottom: 1px solid black;
+  border-color: black;
+  box-shadow: 0 3px 4px -4px #7e6d35;
+  background-color: #f9f7f1;
+  transition: background-color 200ms ease-in-out;
+  transition: border-color 1s ease;
+}
