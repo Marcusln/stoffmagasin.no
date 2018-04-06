@@ -128,7 +128,7 @@ min-height: calc(100vh - 120px);
  -->
 
 <script>
-      $(function() {
+$(function() {
   $('#topbar .fa-search').click(function(e) {
       e.stopPropagation()
       $('#fullscreenSearch').fadeIn('fast');

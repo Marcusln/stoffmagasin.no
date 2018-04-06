@@ -83,6 +83,10 @@ $dateMonthNoZero = get_the_date( 'n' );
 	 
 </script>
 
+<div style="height: 95vw; width: 95vw; display: flex; align-items: center; justify-content: center;">
+	<img src="" style="display: flex; padding: 50px;">
+</div>
+
 <!-- TEKST -->
 <!-- Litt lysere bg-color: #FCFBF8 -->
 <article id="textbox-article" class="single-textbox hidden-md-down" class="" style="margin: 50px 0 0 15vw; padding: 50px 50px 0 40px; width: 750px; border-left: 1px solid darkgray; position: relative;">

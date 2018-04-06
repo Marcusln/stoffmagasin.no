@@ -46,7 +46,7 @@ get_header();
 
 <b>Daglig leder </b> <a class="underline" href="mailto:hsharam@gmail.com">Hans Sebastian Haram</a><br />
 
-<b>Kulturredaktør</b> Anne Aase Rokkan<br />
+<b>Samfunnsredaktør</b> Anne Aase Rokkan<br />
 
 <b>Illustrasjonsansvarlig</b> Ida Neverdahl<br />
 
@@ -60,7 +60,7 @@ get_header();
 
 <b>Grafikere</b> Ida Woldsund og Frida Annette Helseth Strømme<br />
 
-<b>Fotoredaktør</b> Maiken Larsen Solholmvik<br />
+<b>Fotoredaktør</b> Henrik Follesø Egeland<br />
 
 <b>Fotografer</b> Fredrik Geving Bedsvaag, Henrik Follesø Egeland, Petter Lysgaard<br />
 
