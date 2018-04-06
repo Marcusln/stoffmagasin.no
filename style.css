@@ -2886,3 +2886,7 @@ a .nav-item .nav-link .active .meny-this {
     font-size: 26px !important;
   }
 }
+
+#topbar a.topbar-cat:hover {
+  color: gray !important;
+}
