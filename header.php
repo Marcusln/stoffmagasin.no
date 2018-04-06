@@ -142,14 +142,14 @@
 
   <!-- Top bar  -->
 
-<div id="topbar" class="hidden-md-down fixed-top" style="opacity: 0.98; width: 100vw;  border-top: 0px solid black; height: 50px; display: flex; align-items: center; justify-content: space-between; z-index: 1000;">
+<div id="topbar" class="hidden-md-down fixed-top" style="opacity: 0.98; width: 100vw;  border-top: 0px solid black; height: 50px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; border-bottom: 1px solid transparent;">
 
     <div id="" class="cursor-pointer-hover" style="margin-left: 20px; width: calc(13vw - 30px);">
       <a href="/index.php" id="logo-link" class="initiallyHidden"><img id="headerLogo" src="/wp-content/uploads/2017/04/stoff.png" style="height: 35px; padding: 5px; filter: none; z-index: 1001;"></a>
       <a id="papirutgave-klikk" class="papirutgave-knapp bg-color-paper" href="https://issuu.com/stoffmagasin" target="_blank" style="padding: 5px;">Nr. 23 &nbsp;&nbsp;&nbsp;3. årgang <!--&nbsp;&nbsp;<i id="papirutgave-ikon" class="fa fa-chevron-down" style="font-weight: 100;" aria-hidden="true"></i>--></a>
     </div>
 
-  <div id="topbar-categories" class="initiallyHidden" style="width: 74vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; flex-direction: row; font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 30px auto 25px auto;">
+  <div id="topbar-categories" class="hide" style="width: 74vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; flex-direction: row; font-size: 16px; text-transform: uppercase; font-weight: 200; margin: 30px auto 25px auto;">
     <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6463">Samfunn</a>
     <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6468">Kultur</a>
     <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6471">Debatt</a>
@@ -191,7 +191,7 @@
       } else {
         $('#topbar').removeClass('topbar-border');
     }
-}); 
+});
 
 </script>
 
@@ -213,15 +213,48 @@ $(window).scroll(function(){
      // }, 2000);
      }); // EOF scroll
 
-/*
-$(window).on("scroll", function() {
-  var scrollHeight = $(document).height();
-  var scrollPosition = $(window).height() + $(window).scrollTop();
-  if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
-      // when scroll to bottom of the page
-  }
+/* Hide navbar categories on scroll etc, modified from
+http://jsfiddle.net/mariusc23/s6mLJ/31/ */
+
+// Hide Header on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 50;
+var navbarHeight = $('#topbar').outerHeight() + $('#logo').outerHeight() + 30;
+
+$(window).scroll(function(event){
+    didScroll = true;
 });
-*/
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+});
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+    var top_of_logomenu = $("#logoMenu").offset().top;
+    var top_of_topbar = $("#topbar").offset().top;
+
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop || top_of_logomenu > top_of_topbar){
+        // Scroll Down
+        $('#topbar-categories').addClass('hide');
+        // Make sure they scroll more than delta
+    } else if (Math.abs(lastScrollTop - st) <= delta) {
+        return;
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('#topbar-categories').removeClass('hide');
+        }
+    }
+    
+    lastScrollTop = st;
+}
 
 </script>
 
