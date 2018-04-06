@@ -23,13 +23,17 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 
 
-<header style="width: 100%; height: 100%; padding-top: 54px; max-width: 100%;">
+<header class="hidden-md-down" style="width: 100%; height: 100%; padding-top: 54px; max-width: 100%;">
 	<div id="" style="width: calc(100%); height: calc(100% - 50px); display: flex;  margin-top: 25px; padding-left: 50px; padding-right: 50px;">
 		<div class="blurry-load-container" style="flex: 1;">
 			<img class="featured-img image-blur" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>"  style="height: 100%; object-fit: contain;">
 		</div>
 	</div>
 </header>
+
+<div class="hidden-lg-up" style="margin-top: 53px;">
+	<img style="width: 100%; height: auto;" src="<?php the_post_thumbnail_url( array( 991,9999 ) ); ?>">
+</div>
 
 
 
@@ -81,19 +85,21 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 <!-- TEKST -->
 <!-- Litt lysere bg-color: #FCFBF8 -->
-<article id="textbox-article" class="container hidden-md-down" class="" style="margin-left: 15vw; width: 800px; border-left: 1px solid darkgray; position: relative;">
+<article id="textbox-article" class="single-textbox hidden-md-down" class="" style="margin: 50px 0 0 15vw; padding: 50px 50px 0 40px; width: 750px; border-left: 1px solid darkgray; position: relative;">
 	<span class="gray" style="font-family: 'Ludacrys'; font-size: 18px; transform: rotate(-90deg); position: absolute; left: -65px; top: 50; letter-spacing: 3px;">
 		<?php echo $dateDay . '.' . $dateMonth . '.' . $dateYear ?>
 	</span>
 
-	<div class="" style="background-color: #f9f7f1; border-bottom: 7px solid #f0ebdb; margin-top: 25px 0 50px 0; padding: 50px 25px;"><!-- border and padding -->
+	<div class="" style="background-color: #f9f7f1; border-bottom: 7px solid #f0ebdb;">
 
 			<span class="graytext kategori">
             	<?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?>
         	</span><br />
-			<span class="overskrift-single" style="font-family: 'Ludacrys'; font-size: 90px; line-height: 110px;">
-				<?php echo $postTitle; ?>
-			</span><br />
+			<div style="width: 800px;">
+				<span class="overskrift-single" style="font-family: 'Ludacrys'; font-size: 90px; line-height: 110px;">
+					<?php echo $postTitle; ?>
+				</span>
+			</div>
 				<!-- lead paragraph fetched from h4 tags via jquery script below. or else insert excerpt-->
 				<span id="ingress" style="font-family: 'Arapey', serif; font-size: 33px; font-weight: 400; line-height: 40px; letter-spacing: 1px;">
 
@@ -152,7 +158,15 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 			</span>
 		</div>
 
-		<div id="article-content" class="single-textbox" style="max-width: calc(100% - 50px); font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
+		<!-- 
+
+<div style="position: absolute; left: calc(15vw + 800px); width: calc(100vw - 15vw - 800px - 50px);">
+	<img src="/wp-content/uploads/SveinMoxvold_GoodPeople-Bergen_001.jpg" style="width: 100%; height: auto;" alt="" />
+</div>
+
+-->
+
+		<div id="article-content" class="" style="font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
 			<?php the_content() ?>
 		</div>
 	</div>
