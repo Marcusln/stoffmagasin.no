@@ -119,10 +119,10 @@ elseif ( $aspectRatio > 2.6 ) {
 
         <div id="next-issue-nav" class="frontpage-margin neste-utgave feed-item component portrait neste-utgave" style="background-color: #f9f7f1 !important; box-shadow: none !important; ">
         <a class="no-decoration frontpage-margin neste-utgave feed-item component portrait" href="<?php echo $linkPrevious ?>" style="background-color: #f9f7f1 !important; ">
-          <div id="line-button" class="to-next-issue feed-text-container" style="flex: 2 !important; text-align: center;" >
+          <div id="line-button" class="to-next-issue feed-text-container" style="flex: 2 !important; text-align: center; padding: 15px 0;" >
                 <span class="nestensvart" style="white-space: nowrap; ">Gå til utgave <div style="font-family: 'Ludacrys', serif; display: inline;"> #</div><?php echo $previousIssue; ?></span>
           </div>
-           <div class="feed-image-container" style="background-color: #f9f7f1 !important; ">
+           <div class="feed-image-container" style="background-color: #f9f7f1 !important; border-right: 0 !important;">
               <img style="" class="feed-image inline img-fluid issue-nav-img" src="/wp-content/uploads/forsider/utgave<?php echo $previousIssue ?>.jpg">
           </div>
         </a>
