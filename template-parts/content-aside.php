@@ -71,7 +71,7 @@ $month = $months[get_the_date('n')];
       FORSIDESTOFF<br />
     </span>
         <span class="" style="background-color: black !important; font-size: 36px; font-family: 'Ludacrys', serif"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
-        <span style="background-color: black !important; color: white !important; font-family: 'Roboto', sans-serif; font-size: 18px;" class=""><?php echo $trimmedExcerpt; ?></span>
+        <span style="background-color: black !important; color: white !important; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: 200;" class=""><?php echo $trimmedExcerpt; ?></span>
   </div>
 </a>
 </article>
