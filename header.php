@@ -52,7 +52,40 @@
 
 <?php include( get_template_directory() . '/menu-fullscreen.php' ); ?>
 
+<!-- PAPIRUTGAVE
+<style type="text/css">
+/*
+  ::-webkit-scrollbar-thumb:horizontal, ::-webkit-scrollbar-button:horizontal {
+    color: red;
+    background-color: yellow;
+  }
+  */
+  ::-webkit-scrollbar:horizontal {
+    width: 10px;
+    height: 10px;
+}
+ /*add a shadow to the scrollbar here*/
+::-webkit-scrollbar-track:horizontal {
+    color: blue;
+    background-color: red;
+}
+/*this is the little scrolly dealio in the bar*/ 
+::-webkit-scrollbar-thumb:horizontal {
+    border-radius: 10px;
+    background: yellow;
+    height: 3px;
+}
+</style>
 
+<div class="papirutgave" style="width: 100vw; height: 100vh; background-color: black; display: flex; align-items: center; flex-direction: row; flex-wrap: no-wrap; overflow-y: scroll;">
+  
+  <div style="height: 50%; width: auto; margin-left: 60px;">
+    <img style="display: flex; height: 100%; width: auto;" src="/wp-content/uploads/forsider/utgave21.jpg">
+  </div>
+  
+</div>
+
+-->
 
 <!-- Fullscreen search -->
 
@@ -102,7 +135,8 @@
   $(function() {
     $('.fa-bars').click(function() {
       $('#fullscreen-menu').fadeIn(200);
-      });
+      })
+    });
   </script>
 
 
@@ -114,6 +148,13 @@
     <div id="" class="cursor-pointer-hover" style="">
       <a href="/index.php" id="logo-link" class="initiallyHidden"><img id="headerLogo" src="/wp-content/uploads/2017/04/stoff.png" style="height: 35px; padding: 5px; filter: none; z-index: 1001;"></a>
       <a id="papirutgave-klikk" class="papirutgave-knapp bg-color-paper" href="https://issuu.com/stoffmagasin" target="_blank" style="padding: 5px;">Nr. 23 &nbsp;&nbsp;&nbsp;3. årgang <!--&nbsp;&nbsp;<i id="papirutgave-ikon" class="fa fa-chevron-down" style="font-weight: 100;" aria-hidden="true"></i>--></a>
+    </div>
+    <div style="align-self: center; font-family: 'Roboto', sans-serif;font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 0 auto;">
+      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6463">Samfunn</a>
+      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6468">Kultur</a>
+      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6471">Debatt</a>
+      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6473">Bergensguide</a>
+      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6608">Om oss</a>
     </div>
     <div class="" style="">
       <!--<a href="https://www.facebook.com/STOFFmagasin/" target="_blank">
