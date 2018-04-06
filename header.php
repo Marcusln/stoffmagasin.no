@@ -140,22 +140,23 @@
   </script>
 
 
-  <!-- Top bar
+  <!-- Top bar  -->
 
-  box-shadow: 0 3px 4px -4px #7e6d35; -->
+<div id="topbar" class="hidden-md-down fixed-top" style="opacity: 0.98; width: 100vw;  border-top: 0px solid black; height: 50px; display: flex; align-items: center; justify-content: space-between; z-index: 1000;">
 
-<div id="topbar" class="hidden-md-down fixed-top" style="opacity: 0.98; width: 100vw;  border-top: 0px solid black; border-bottom: 0px solid black; height: 50px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px 0 20px; z-index: 1000;">
-    <div id="" class="cursor-pointer-hover" style="">
+    <div id="" class="cursor-pointer-hover" style="margin-left: 20px; width: calc(13vw - 30px);">
       <a href="/index.php" id="logo-link" class="initiallyHidden"><img id="headerLogo" src="/wp-content/uploads/2017/04/stoff.png" style="height: 35px; padding: 5px; filter: none; z-index: 1001;"></a>
       <a id="papirutgave-klikk" class="papirutgave-knapp bg-color-paper" href="https://issuu.com/stoffmagasin" target="_blank" style="padding: 5px;">Nr. 23 &nbsp;&nbsp;&nbsp;3. årgang <!--&nbsp;&nbsp;<i id="papirutgave-ikon" class="fa fa-chevron-down" style="font-weight: 100;" aria-hidden="true"></i>--></a>
     </div>
-    <div style="align-self: center; font-family: 'Roboto', sans-serif;font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 0 auto;">
-      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6463">Samfunn</a>
-      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6468">Kultur</a>
-      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6471">Debatt</a>
-      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6473">Bergensguide</a>
-      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6608">Om oss</a>
-    </div>
+
+  <div id="topbar-categories" class="initiallyHidden" style="width: 74vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; flex-direction: row; font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 30px auto 25px auto;">
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6463">Samfunn</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6468">Kultur</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6471">Debatt</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=lost-gjenfortalt">Løst gjenfortalt</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=under-beltestedet">Under beltestedet</a>
+ </div>
+    
     <div class="" style="">
       <!--<a href="https://www.facebook.com/STOFFmagasin/" target="_blank">
         <i class="fa fa-facebook topbar-icon" style="padding: 0 3px 0 3px;" aria-hidden="true"></i>
@@ -169,11 +170,30 @@
       <a id="" onclick="" class="" style="">
         <i id="search-icon" class="cursor-pointer-hover fa fa-search topbar-icon" style="padding: 0 3px 0 3px;"></i>
       </a>
-      <a class="" style="">
+      <a class="" style="margin-right: 20px;">
         <i id="hamburger-icon" class="fa fa-bars topbar-icon" style="padding: 0 3px 0 3px;"></i>
       </a>
     </div>
+
   </div>
+
+
+<script>
+
+ $(window).scroll(function() {
+    var top_of_logomenu = $("#logoMenu").offset().top;
+    var bottom_of_topbar = $("#topbar").offset().top + $("#topbar").outerHeight();
+    var bottom_of_screen = $(window).scrollTop() + window.innerHeight;
+    var top_of_screen = $(window).scrollTop();
+
+    if (top_of_logomenu < bottom_of_topbar) {
+        $('#topbar').addClass('topbar-border');
+      } else {
+        $('#topbar').removeClass('topbar-border');
+    }
+}); 
+
+</script>
 
 
 <?php require( get_template_directory() . '/topbar-mobile.php' ); ?>

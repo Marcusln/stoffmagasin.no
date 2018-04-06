@@ -67,18 +67,20 @@ if ( $related_posts ) {
   $query['post__in'] = $related_posts;
   $query['ignore_sticky_posts'] = 1; // $query['post__not_in'] = $exclude; <-- this works, but we want to include sticky posts, just skip the sticky behavior
   $query['orderby'] = 'post__in';
+  // $query['category__not_in'] = 17; this hides related for bergen revels, but the mer lesestoff header is still there, which is stupid.
   $title = __( 'Related', 'prefix' );
+  echo "<div class='related-posts-container frontpage-margin' style='padding-left: 37px; display: flex; margin-bottom: 0; margin-top: 50px;''>
+  <div id='mest-lest' class='mest-lest'>
+    Mer lesestoff
+  </div>
+</div>";
 } else {
   $query['post__not_in'] = array( $post->ID );
 }
 ?>
 
 
-<div class="related-posts-container frontpage-margin " style=" padding-left: 37px; display: flex; margin-bottom: 0; margin-top: 50px;">
-  <div id="mest-lest" class="mest-lest">
-    Mer lesestoff
-  </div>
-</div>
+
 
 <div id="related-posts-container">
   

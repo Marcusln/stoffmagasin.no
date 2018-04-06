@@ -78,13 +78,13 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 <!-- ARTICLE BOX -->
 
-<article id="textbox-article" class="container" class="" style="border-left: 1px solid darkgray;">
+<article id="textbox-article" class="single-textbox" class="" style="padding-left: 15px; border-left: 1px solid darkgray;">
 	<span class="gray" style="font-family: 'Ludacrys'; font-size: 18px; transform: rotate(-90deg); position: absolute; left: -65px; top: 50; letter-spacing: 3px;">
 					<?php echo get_the_date('d') . '.' . get_the_date('m') . '.' . get_the_date('Y') ?>
 				</span>
 	<div class="col-8" style="background-color: #f9f7f1; border-bottom: 7px solid #f0ebdb; margin-top: 25px; padding-top: 50px; padding-bottom: 50px; margin-bottom: 50px;">
 	<div class="row" >
-		<div class="single-textbox">
+		<div class="">
 			<span id="ingress" style="font-family: 'Arapey', serif; font-size: 33px; font-weight: 400; line-height: 40px;">
 				<?php
 				if ( $dateYear >= 2017 and $dateMonthNoZero > 7 or $dateYear >= 2018 or get_field( 'journalist' ) ) {
@@ -198,7 +198,7 @@ $(window).scroll(function() {
 <!-- Mobile article -->
 
 <header class="header hidden-lg-up" style="">
-	<img class="featured-img-mobile" src="<?php the_post_thumbnail_url(); ?>" style="">
+	<img class="featured-img-mobile" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>" style="">
 </header>
 
 <!-- Mobile article -->
