@@ -2674,6 +2674,7 @@ display: block;
       border-left: 1px solid #f7f5ed;
       border-bottom: 3px solid #f0ebdb;
       border-right: 2px solid #f0ebdb;
+      padding: 15px !important;
   }
 
     .feed-image-container {
@@ -2892,10 +2893,8 @@ a .nav-item .nav-link .active .meny-this {
 }
 
 .topbar-border {
-  border-bottom: 1px solid black;
-  border-color: black;
+  border-bottom: 1px solid black !important;
   box-shadow: 0 3px 4px -4px #7e6d35;
   background-color: #f9f7f1;
-  transition: background-color 200ms ease-in-out;
-  transition: border-color 1s ease;
+  transition: background-color 200ms ease-in-out, border-bottom 500ms ease-in-out;
 }
