@@ -150,11 +150,11 @@
       <a id="papirutgave-klikk" class="papirutgave-knapp bg-color-paper" href="https://issuu.com/stoffmagasin" target="_blank" style="padding: 5px;">Nr. 23 &nbsp;&nbsp;&nbsp;3. årgang <!--&nbsp;&nbsp;<i id="papirutgave-ikon" class="fa fa-chevron-down" style="font-weight: 100;" aria-hidden="true"></i>--></a>
     </div>
     <div style="align-self: center; font-family: 'Roboto', sans-serif;font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 0 auto;">
-      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6463">Samfunn</a>
-      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6468">Kultur</a>
-      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6471">Debatt</a>
-      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6473">Bergensguide</a>
-      <a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6608">Om oss</a>
+      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6463">Samfunn</a>
+      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6468">Kultur</a>
+      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6471">Debatt</a>
+      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6473">Bergensguide</a>
+      <a style="padding: 10px 15px 10px 15px;" href="/?page_id=6608">Om oss</a>
     </div>
     <div class="" style="">
       <!--<a href="https://www.facebook.com/STOFFmagasin/" target="_blank">
@@ -218,24 +218,24 @@ $(window).on("scroll", function() {
   <div id="logoMenu" class="hidden-md-down" style="width: 74vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; flex-direction: row; font-size: /*calc(0.7em + 1vmin)*/ 16px; border-top: 3px solid black; text-transform: uppercase; font-weight: 400; margin: 30px auto 25px auto;">
       <?php
         if ( is_page( '6463' ) ) {
-          echo '<a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny-this" href="/?page_id=6463">Samfunn</a>';
+          echo '<a style="padding: 10px 15px 10px 15px;" class="meny-this" href="/?page_id=6463">Samfunn</a>';
       } else {
-          echo '<a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6463">Samfunn</a>';
+          echo '<a style="padding: 10px 15px 10px 15px;" class="meny" href="/?page_id=6463">Samfunn</a>';
       }
         if ( is_page( '6468' ) ) {
-          echo '<a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny-this" href="/?page_id=6468">Kultur</a>';
+          echo '<a style="padding: 10px 15px 10px 15px;" class="meny-this" href="/?page_id=6468">Kultur</a>';
       } else {
-          echo '<a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6468">Kultur</a>';
+          echo '<a style="padding: 10px 15px 10px 15px;" class="meny" href="/?page_id=6468">Kultur</a>';
       }
         if ( is_page( '6471' ) ) {
-          echo '<a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny-this" href="/?page_id=6471">Debatt</a>';
+          echo '<a style="padding: 10px 15px 10px 15px;" class="meny-this" href="/?page_id=6471">Debatt</a>';
       } else {
-          echo '<a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6471">Debatt</a>';
+          echo '<a style="padding: 10px 15px 10px 15px;" class="meny" href="/?page_id=6471">Debatt</a>';
       }
         if ( is_page( '6473' ) ) {
-          echo '<a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny-this" href="/?page_id=6473">Bergensguide</a>';
+          echo '<a style="padding: 10px 15px 10px 15px;" class="meny-this" href="/?page_id=6473">Bergensguide</a>';
       } else {
-          echo '<a style="padding: 10px 15px 10px 15px;" class=" nav-item nav-link active meny" href="/?page_id=6473">Bergensguide</a>';
+          echo '<a style="padding: 10px 15px 10px 15px;" class="meny" href="/?page_id=6473">Bergensguide</a>';
       } ?>
       <span style="cursor: pointer; padding: 10px 15px 10px 15px;" class="nav-item nav-link active meny om-oss-knapp">
         Om oss
