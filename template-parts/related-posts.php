@@ -100,17 +100,6 @@ $months = array('', 'januar', 'februar', 'mars', 'april', 'mai', 'juni', 'juli',
  
 $month = $months[get_the_date('n')];
 
-$getImageSize = @getimagesize( $featuredUrl );
-
-if ( $getImageSize ) {
-
-    list($width, $height, $type, $attr) = $getImageSize;
-    $aspectRatio = $width / $height;
-
-} else {
-  $aspectRatio = 2;
-}
-
 // these posts have drawings which is best a bit smaller than usual
                 if ( in_category( 'bergen-revels' ) or in_category( 'quiz' ) or in_category( 'leder' ) ) {
                     require( get_template_directory() . '/template-parts/force-smaller-img.php' );
