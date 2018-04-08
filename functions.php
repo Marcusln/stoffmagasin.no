@@ -20,13 +20,6 @@ if ( ! function_exists( 'stoffu_setup' ) ) :
  * as indicating support for post thumbnails.
  */
 function stoffu_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Stoffu, use a find and replace
-	 * to change 'stoffu' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( 'stoffu', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -46,7 +39,7 @@ function stoffu_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	set_post_thumbnail_size( 150, 150, false );
+	set_post_thumbnail_size( 50, 50, false );
 	add_image_size( 'small', 350, 300 );
 	add_image_size( 'medium', 600, 1200 ); 
 	add_image_size( 'large', 2000, 1500 ); 
@@ -132,27 +125,6 @@ function stoffu_scripts() {
 add_action( 'wp_enqueue_scripts', 'stoffu_scripts' );
 
 */
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/custom-header.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Custom functions that act independently of the theme templates.
- */
-require get_template_directory() . '/inc/extras.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
 
 // Activate post formats
 

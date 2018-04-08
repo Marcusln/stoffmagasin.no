@@ -171,7 +171,7 @@ $( document ).on( 'keydown', function ( e ) {
 <!-- FEATURED IMAGE -->
 
 <div class="bergensguide-img" style="">
-  <img class="image-blur" style="position: absolute; width: 100%; height: auto;" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>">
+  <img class="image-blur" style="position: absolute; width: 100%; height: auto;" src="<?php the_post_thumbnail_url( array(50, 9999) ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>">
 </div>
 
 

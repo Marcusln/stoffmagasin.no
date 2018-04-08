@@ -5,7 +5,6 @@
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
  * @package Stoffu
- test
  */
 
 
@@ -21,31 +20,17 @@ get_search_form();
 			/* Start the Loop */
 			while ( have_posts() ) : the_post();
 
-$getImageSize = @getimagesize( $featuredUrl );
-
-if ( $getImageSize ) {
-	$featuredUrl = get_the_post_thumbnail_url();
-    list($width, $height, $type, $attr) = $getImageSize;
-    $aspectRatio = $width / $height;
-
-} else {
-  $aspectRatio = 2;
-}
-
 				/**
 				 * Run the loop for the search to output the results.
 				 * If you want to overload this in a child theme then include a file
 				 * called content-search.php and that will be used instead.
 				 */
 				
-				// fetch aspect ratio and give wide layout for wide pictures
-    			if ( $aspectRatio > 3 ) {
-    				require( get_template_directory() . '/template-parts/content-chat.php' );
-    			} elseif ( empty( get_post_format() ) ) {
+				?> <div class="hidden-lg-up" style="height: 50px;"></div> <?php
+				if ( empty( get_post_format() ) ) {
     				require( get_template_directory() . '/template-parts/content-standard.php' );
     			// if post format is standard, get_post_format actually returns null (!). Hence we want to require content-standard.php
     			} else {
-    				?> <div class="hidden-lg-up" style="height: 50px;"></div> <?php
     				// else we can fetch template file for the format, e.g. content-aside.php for cover (renamed in functions.php)
     				get_template_part('template-parts/content', get_post_format() ); 
     			}
