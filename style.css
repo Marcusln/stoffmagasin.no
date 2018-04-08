@@ -2872,7 +2872,7 @@ a .nav-item .nav-link .active .meny-this {
   -webkit-filter: blur(30px);
   filter: blur(30px);
   /* transform: scale(.9);
-  -webkit-transform: scale(.9); */
+  -webkit-transform: scale(.9);  hei */
   margin-top: 10px;
 }
 
