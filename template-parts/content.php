@@ -7,6 +7,7 @@
  * @package Stoffu
  */
 
+/*
 $featuredUrl = get_the_post_thumbnail_url();
 
 $getImageSize = @getimagesize( $featuredUrl );
@@ -19,6 +20,8 @@ if ( $getImageSize ) {
 } else {
   $aspectRatio = 2;
 }
+
+*/
 
 
 		// checks if article is single, ie. not on home page
@@ -34,13 +37,13 @@ if ( $getImageSize ) {
 			} elseif ( !has_post_thumbnail() ) { // 
 				require( get_template_directory() . '/template-parts/single/single-noimg.php' );
 			// fallback on landscape because the template fits all articles ... well dont really know why but why not
-			} elseif ( $aspectRatio <= 1.08 ) { // 
+			} /* elseif ( $aspectRatio <= 1.08 ) { // 
 				require(get_template_directory() . '/template-parts/single/single-portrait.php' );
 			// fallback on landscape because the template fits all articles ... well dont really know why but why not
 			} elseif ( $aspectRatio > 1.08 ) { // 
 				require( get_template_directory() . '/template-parts/single/single-landscape.php' );
 			// fallback on landscape because the template fits all articles ... well dont really know why but why not
-			} else {
+			} */ else {
 				require( get_template_directory() . '/template-parts/single/single-landscape.php' );
 			}
 		// or else its on the home page, and we want to get their respective template 
