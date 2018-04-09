@@ -39,7 +39,7 @@ $month = $months[get_the_date('n')];
 <!--
   ********************** DESKTOP ***************** -->
 
-<article id="cover" class="hidden-md-down feed-item component cover feed-box-border frontpage-margin" style="background-color: black; box-shadow: 3px 5px #f0ebdb;">
+<article id="cover" class="hidden-sm-down feed-item component cover feed-box-border frontpage-margin" style="background-color: black; box-shadow: 3px 5px #f0ebdb;">
 <a class="feed-item component cover feed-box-border frontpage-margin" href="<?php echo $postUrl; ?>" style="text-decoration: none; color: black; background-color: black;">
   <div class="feed-image-container" style="background-color: black !important; max-height: 70vh;">
     <img style="" class="feed-image inline img-fluid" style="" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>">
@@ -60,17 +60,18 @@ $month = $months[get_the_date('n')];
 <!--
   ********************** MOBILE ***************** -->
 
-<article id="cover"  class="hidden-lg-up feed-item component portrait" style="margin-top: -20px;">
+<article id="content-standard" class="hidden-md-up feed-item component portrait" style="margin-top: -25px;">
 <a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $postUrl; ?>" style="">
    <div class="feed-image-container" style="">
-      <img id="cover-img" style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>">
+      <img style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>">
   </div>
-  <div class="feed-text-container" style="background-color: black !important; color: white !important; padding: 15px 25px 15px 25px;" >
-    <span class=" kategori" style="background-color: black !important; font-size: 12px !important; font-weight: 100;
-  font-family: 'Roboto', sans-serif; color: white;">
+  <div class="feed-text-container" style="background-color: black !important; color: white !important;" >
+    <span class="kategori" style="background-color: black !important; font-size: 12px; font-weight: 100; font-family: 'Roboto', sans-serif; color: white;">
       FORSIDESTOFF<br />
     </span>
-        <span class="" style="background-color: black !important; font-size: 36px; font-family: 'Ludacrys', serif"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
+        <span class="" style="background-color: black !important; font-size: 26px; font-family: 'Ludacrys', serif">
+          <?php echo $postTitle; ?>
+        </span><br style="line-height: 2vh;">
         <span style="background-color: black !important; color: white !important; font-family: 'Roboto', sans-serif; font-size: 18px; font-weight: 200;" class=""><?php echo $trimmedExcerpt; ?></span>
   </div>
 </a>
@@ -79,27 +80,6 @@ $month = $months[get_the_date('n')];
 <!-- Else close -->
 
   <?php } ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
