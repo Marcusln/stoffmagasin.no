@@ -50,8 +50,6 @@ $dateMonthNoZero = get_the_date( 'n' );
         var parentContainer = $(this).parent(),
             imageContainer = $(this)
         
-        
-        parentContainer.addClass('blurry-load-container');
         imageContainer.addClass('img-blur')
 
         // 1: load small image and show it
@@ -66,6 +64,7 @@ $dateMonthNoZero = get_the_date( 'n' );
         imgLarge.src = $(this).attr('data-large');
         imgLarge.onload = function () {
              imgLarge.classList.add('loaded');
+             imageContainer.css('opacity', '');
         };
         parentContainer.append(imgLarge)
        
@@ -78,15 +77,19 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 <!-- ARTICLE BOX -->
 
-<article id="textbox-article" class="single-textbox" class="" style="padding-left: 15px; border-left: 1px solid darkgray;">
+<!-- TEKST -->
+<!-- Litt lysere bg-color: #FCFBF8 -->
+<article id="textbox-article" class="single-textbox hidden-md-down" class="" style="margin: 50px 0 0 15vw; padding: 50px 50px 0 40px; width: 750px; border-left: 1px solid darkgray; position: relative;">
 	<span class="gray" style="font-family: 'Ludacrys'; font-size: 18px; transform: rotate(-90deg); position: absolute; left: -65px; top: 50; letter-spacing: 3px;">
-					<?php echo get_the_date('d') . '.' . get_the_date('m') . '.' . get_the_date('Y') ?>
-				</span>
-	<div class="col-8" style="background-color: #f9f7f1; border-bottom: 7px solid #f0ebdb; margin-top: 25px; padding-top: 50px; padding-bottom: 50px; margin-bottom: 50px;">
-	<div class="row" >
-		<div class="">
-			<span id="ingress" style="font-family: 'Arapey', serif; font-size: 33px; font-weight: 400; line-height: 40px;">
+		<?php echo $dateDay . '.' . $dateMonth . '.' . $dateYear ?>
+	</span>
+
+	<div class="" style="background-color: #f9f7f1; border-bottom: 7px solid #f0ebdb;">
+				<!-- lead paragraph fetched from h4 tags via jquery script below. or else insert excerpt-->
+				<span id="ingress" style="font-family: 'Arapey', serif; font-size: 33px; font-weight: 400; line-height: 40px; letter-spacing: 1px;">
+
 				<?php
+
 				if ( $dateYear >= 2017 and $dateMonthNoZero > 7 or $dateYear >= 2018 or get_field( 'journalist' ) ) {
 					echo "<span id='ingress-jquery' style='display: none;'></span>";
 					// jquery script below fetches text inside <h4> tags, store it in variable, and place the text in the variable into id #ingress-jquery. If the advanced custom fields field 'journalist' is filled out, we know that the article has been posted after the new design, or the variable has been filled out manually. Consequently, we want to store intro in a variable (good practise, makes it easier to work with in the future, e.g. with a new design or template) and remove text inside <h4>. Also, if article is newer than 01.08.2017, this id #ingress-jquery is not displayed. Instead, the excerpt is displayed. The reason is that after this date, the excerpt is usually nice and neat. Otherwise, the excerpt is usually way too long, and we should use the intro inside <h4> instead.
@@ -109,19 +112,21 @@ $dateMonthNoZero = get_the_date( 'n' );
 h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-height: 60px; }
 </style>
 ";
-				} ?>
+				}
+				?>
 			</span>
-		</div>
 
-		<div id="body" class="single-textbox" style="padding: 15px 0;">
+		<div id="byline" class="" style="padding: 15px 0;">
+
 			<span class="byline-article">
+
 				<?php if ( get_field( 'journalist' ) ) {
 
-					echo "<script>";
-					echo "$(function($) {";
-    				echo "$('h6').remove();"; // remove <h4> tag with corresponding text
-					echo "});";
-					echo "</script>";
+					echo "<script>
+							 $(function($) {
+	    					 	$('h6').remove();
+							 	});
+						 </script>";
 
 					echo 'Tekst ' . get_field( 'journalist' ) . '<br />';
 					
@@ -131,21 +136,26 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 								echo 'Illustrasjon ' . get_field( 'illustrasjon' );
 							} else {
 								echo get_field( 'bildekreditering' ) . ' ' . get_field( 'navn_kreditering' );
-				}
+							}
 
-				} // else...? script
-				
+						} 
 				?>
 			</span>
 		</div>
 
-		<div id="article-content" class="single-textbox" style="max-width: calc(100% - 50px); font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
+		<!-- 
 
+<div style="position: absolute; left: calc(15vw + 800px); width: calc(100vw - 15vw - 800px - 50px);">
+	<img src="/wp-content/uploads/SveinMoxvold_GoodPeople-Bergen_001.jpg" style="width: 100%; height: auto;" alt="" />
+</div>
+
+-->
+
+		<div id="article-content" class="" style="font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
 			<?php the_content() ?>
 		</div>
 	</div>
 	</div>
-
 </article>
 
         <nav class="nav-issue hide hidden-md-down" style="content: '';  position: absolute; text-align: center; display: block; vertical-align: baseline;">
