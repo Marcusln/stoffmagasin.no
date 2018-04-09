@@ -78,17 +78,19 @@ get_header();
 
             while ($the_query_nonsticky->have_posts()) : $the_query_nonsticky->the_post(); 
 
-$getImageSize = @getimagesize( $featuredUrl );
+$featuredUrl = get_the_post_thumbnail_url();
+$getImageSize = getimagesize( $featuredUrl );
 
 if ( $getImageSize ) {
 
     list($width, $height, $type, $attr) = $getImageSize;
     $aspectRatio = $width / $height;
 
-} else {
-  $aspectRatio = 2;
-}
+    if ( $aspectRatio > 1.08 ) {
+        update_field('layout', 'landskap');
+    }
 
+} 
                 
                 // these posts have drawings which is best a bit smaller than usual
                 if ( in_category( 'bergen-revels' ) or in_category( 'quiz' ) or in_category( 'leder' ) ) {
