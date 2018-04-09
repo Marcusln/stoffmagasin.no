@@ -54,9 +54,12 @@
 
 <div id="fullscreenSearch" class="initiallyHidden hidden-md-down" style="width: 100vw; height: 100vh; position: fixed; background-color: #f9f7f1; z-index: 1001;">
   <div id="topbar" class="hidden-md-down bg-color-paper fixed-top" style="box-shadow: 0 3px 4px -4px #7e6d35; border-top: 0px solid black; border-bottom: 1px solid black; height: 50px; opacity: 0.98; display: flex; align-items: center; justify-content: space-between; padding: 0 20px 0 20px; width: 100vw; z-index: 1000;">
+
     <div style="">
       <a href="/index.php"><img id="headerLogo" src="/wp-content/uploads/2017/04/stoff.png" style="height: 35px; z-index: 1001; filter: none; padding: 5px;"></a>
     </div>
+
+
     <div class="" style="">
       <a href="https://www.facebook.com/STOFFmagasin/" target="_blank">
         <i class="fa fa-facebook topbar-icon" style="padding: 0 3px 0 3px; font-size: 1.3rem;
@@ -96,10 +99,20 @@
  -->
 
 <div id="topbar" class="hidden-md-down fixed-top bg-color-paper" style="box-shadow: 0 3px 4px -4px #7e6d35; opacity: 0.98; width: 100vw;  border-top: 0px solid black; border-bottom: 1px solid black; height: 50px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px 0 20px; z-index: 1000;">
+
     <div id="" class="cursor-pointer-hover" style="">
       <a href="/index.php" id="logo-link" class=""><img id="headerLogo" src="/wp-content/uploads/2017/04/stoff.png" style="height: 35px; padding: 5px; filter: none; z-index: -1000;"></a>
     </div>
-    <div class="" style="">
+
+    <div id="topbar-categories" class="hide" style="width: 100vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 30px auto 25px auto;">
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6471">Debatt</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/kultur/?kategori=tre-kule-folk">Tre kule</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=quiz">Quiz</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=lost-gjenfortalt">Løst gjenfortalt</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=under-beltestedet">Under beltestedet</a>
+ </div>
+
+    <div class="" style="display: flex; flex-direction: row; ">
       <!--<a href="https://www.facebook.com/STOFFmagasin/" target="_blank">
         <i class="fa fa-facebook topbar-icon" style="padding: 0 3px 0 3px;" aria-hidden="true"></i>
       </a>
@@ -110,10 +123,10 @@
         <i class="fa fa-twitter topbar-icon" style="padding: 0 15px 0 3px;" aria-hidden="true"></i>
       </a> -->
       <a id="" onclick="" class="" style="">
-        <i id="search-icon" class="cursor-pointer-hover fa fa-search topbar-icon" style="padding: 0 3px 0 3px;"></i>
+        <i id="search-icon" class="cursor-pointer-hover fa fa-search topbar-icon" style="padding-right: 10px;"></i>
       </a>
       <a class="" style="">
-        <i id="hamburger-icon" class="fa fa-bars topbar-icon" style="padding: 0 3px 0 3px;"></i>
+        <i id="hamburger-icon" class="fa fa-bars topbar-icon" style=""></i>
       </a>
     </div>
   </div>
@@ -156,6 +169,42 @@ $( document ).on( 'keydown', function ( e ) {
         //$('#s').off('focus');
     }
 });
+
+/* Hide navbar categories on scroll etc, modified from
+http://jsfiddle.net/mariusc23/s6mLJ/31/ */
+
+// Hide Header on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 50;
+var navbarHeight = $('#topbar').outerHeight() + $('#logo').outerHeight() + 30;
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+});
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+
+    if (st > lastScrollTop){
+        // Scroll Down
+        $('#topbar-categories').addClass('hide');
+        // Make sure they scroll more than delta
+    } else if (Math.abs(lastScrollTop - st) <= delta) {
+        return;
+    } else {
+            $('#topbar-categories').removeClass('hide');
+    }
+    
+    lastScrollTop = st;
+}
 
 </script>
 
