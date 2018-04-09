@@ -2891,6 +2891,10 @@ a .nav-item .nav-link .active .meny-this {
   opacity: 1;
 }
 
+.blurry-load-container img.transparent, .bergensguide-img img.transparent {
+  opacity: 0;
+}
+
 .blurry-load-container .img-blur {
   -webkit-filter: blur(30px);
   filter: blur(30px);
