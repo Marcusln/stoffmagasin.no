@@ -142,7 +142,7 @@
 
   <!-- Top bar  -->
 
-<div id="topbar" class="hidden-md-down fixed-top" style="opacity: 0.98; width: 100vw;  border-top: 0px solid black; height: 50px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; border-bottom: 1px solid transparent;">
+<div id="topbar" class="hidden-md-down fixed-top" style="opacity: 0.98; width: 100vw; height: 50px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; border-bottom: 1px solid transparent;">
 
     <div id="" class="cursor-pointer-hover" style="margin-left: 20px; width: calc(13vw - 30px);">
       <a href="/index.php" id="logo-link" class="initiallyHidden"><img id="headerLogo" src="/wp-content/uploads/2017/04/stoff.png" style="height: 35px; padding: 5px; filter: none; z-index: 1001;"></a>
@@ -150,14 +150,14 @@
     </div>
 
   <div id="topbar-categories" class="hide" style="width: 100vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; flex-direction: row; font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 30px auto 25px auto;">
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6463">Samfunn</a>
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6468">Kultur</a>
     <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6471">Debatt</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/kultur/?kategori=tre-kule-folk">Tre kule</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=quiz">Quiz</a>
     <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=lost-gjenfortalt">Løst gjenfortalt</a>
     <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=under-beltestedet">Under beltestedet</a>
  </div>
     
-    <div class="" style="">
+    <div class="" style="display: flex; flex-direction: row; margin-right: 20px;">
       <!--<a href="https://www.facebook.com/STOFFmagasin/" target="_blank">
         <i class="fa fa-facebook topbar-icon" style="padding: 0 3px 0 3px;" aria-hidden="true"></i>
       </a>
@@ -168,10 +168,10 @@
         <i class="fa fa-twitter topbar-icon" style="padding: 0 15px 0 3px;" aria-hidden="true"></i>
       </a> -->
       <a id="" onclick="" class="" style="">
-        <i id="search-icon" class="cursor-pointer-hover fa fa-search topbar-icon" style="padding: 0 3px 0 3px;"></i>
+        <i id="search-icon" class="cursor-pointer-hover fa fa-search topbar-icon" style="padding-right: 10px;"></i>
       </a>
-      <a class="" style="margin-right: 20px;">
-        <i id="hamburger-icon" class="fa fa-bars topbar-icon" style="padding: 0 3px 0 3px;"></i>
+      <a class="" style="">
+        <i id="hamburger-icon" class="fa fa-bars topbar-icon" style=""></i>
       </a>
     </div>
 
@@ -220,7 +220,6 @@ http://jsfiddle.net/mariusc23/s6mLJ/31/ */
 var didScroll;
 var lastScrollTop = 0;
 var delta = 50;
-var navbarHeight = $('#topbar').outerHeight() + $('#logo').outerHeight() + 30;
 
 $(window).scroll(function(event){
     didScroll = true;
@@ -312,42 +311,23 @@ function hasScrolled() {
 
   <div class="om-oss-text" style="display: flex; flex-wrap: nowrap;">
     <div class="hidden-md-down col-6 "  style="display: flex; flex-direction: column; text-align: justify; font-family: 'Arapey', serif; font-size: 18px; line-height: 30px; font-weight: 400;">
-      <p style="">Prosjektet Stoff magasin ble startet tidlig i 2015 av en gjeng NHH-studenter som ønsket å lage en unik, uavhengig og uredd studentavis. Første utgave ble lansert 20.03.15. Avisen satser på dyptgående, modig og kreativ journalistikk innenfor kultur, økonomi og samfunn. Stoff består av studenter som jobber frivillig og ulønnet som journalister, fotografer og grafikere. Redaksjonen har erfaring fra andre store aviser som blant annet Dagens Næringsliv, Bergens Tidende, Aftenposten og Finansavisen.</p>
+      <p style="">Stoff <a class="underline" href="https://www.dn.no/etterBors/2015/03/10/2157/Medier/studentavisopprr-i-bergen" target="_blank">ble</a> <a class="underline" href="http://www.nattogdag.no/2015/03/stoff-magasin-pungshots-dekning-og-kvalitetsjournalistikk/" target="_blank">startet</a> <a class="underline" href="http://www.bt.no/folk/Lager-avis-fra-hybelen-3328137.html?xtor=RSS-2" target="_blank">tidlig</a> i 2015 av en gjeng NHH-studenter som ønsket å lage en unik, uavhengig og uredd studentavis. Første utgave ble lansert 20.03.15. Avisen satser på dyptgående, modig og kreativ journalistikk innenfor kultur, økonomi og samfunn. Stoff består av studenter fra hele student-Bergen som jobber frivillig og ulønnet som journalister, fotografer og grafikere. Redaksjonen har erfaring fra andre store aviser som blant annet Dagens Næringsliv, Bergens Tidende, Aftenposten og Finansavisen.</p>
 
       <p style="">
         Stoff blir utgitt i fire papirutgaver i hvert akademiske semester, og blir distribuert i Bergen.
       </p>
 
-      <p style="display: flex; font-weight: 800;">
-        
-      </p>
-
-      <p style="">
-        <span style="font-weight: bold;">Medieoppslag</span><br/>
-        Dagens Næringsliv &mdash; <a class="underline" href="https://www.dn.no/etterBors/2015/03/10/2157/Medier/studentavisopprr-i-bergen" target="_blank">Studentavisopprør i Bergen</a><br />
-
-        Bergensavisen &mdash; <a class="underline" href="http://www.ba.no/Mener_NHHs_studentavis__Bulle__er_et_smiskeorgan-5-8-35800.html" target="_blank">Mener NHHs studentavis «Bulle» er et smiskeorgan</a><br />
-
-        Natt & Dag &mdash; <a class="underline" href="http://www.nattogdag.no/2015/03/stoff-magasin-pungshots-dekning-og-kvalitetsjournalistikk/" target="_blank">Pungshots-dekning og kvalitetsjournalistikk </a><br />
-
-        Inside &mdash; <a class="underline" href="http://www.inside24.no/k7-bulletin-og-studvest-har-fatt-ny-konkurrent/" target="_blank">K7 Bulletin og Studvest har fått ny konkurrent</a><br />
-
-        Studvest &mdash; <a class="underline" href="http://www.studvest.no/nytt-stoff-pa-markedet/" target="_blank">Nytt Stoff på markedet</a><br />
-
-        Studentradioen i Bergen &mdash; <a class="underline" href="http://srib.no/2015/03/24/nytt-stoff-pa-markedet/" target="_blank">Nytt Stoff på markedet</a><br />
-
-        Bergens Tidende &mdash; <a class="underline" href="http://www.bt.no/folk/Lager-avis-fra-hybelen-3328137.html?xtor=RSS-2" target="_blank">Lager avis fra hybelen</a><br />
-      </p>
-
       <p style="font-weight: 400;">Kontakt oss på <a class="underline" href="mailto:red@stoffmagasin.no">red@stoffmagasin.no</a>.</p>
+
+      <div style="font-family: 'Ludacrys', serif; font-size: 26px; padding: 15px; text-align: center; color: white !important; background-color: black !important; ">Ønsker du å annonsere i Stoff? Ta kontakt på <a href="mailto:red@stoffmagasin.no" style="color: white !important; "> red@stoffmagasin.no</a></div>
     </div>
     <div class="hidden-md-down col-6" style="font-family: 'Arapey', serif; font-size: 18px; line-height: 30px; font-weight: 400;">
-
+<p>
 <b>Ansvarlig redaktør</b> Ingrid Marie Vikhammer Sandvik <br />
 
 <b>Daglig leder </b> <a class="underline" href="mailto:hsharam@gmail.com">Hans Sebastian Haram</a><br />
 
-<b>Kulturredaktør</b> Anne Aase Rokkan<br />
+<b>Samfunnsredaktør</b> Anne Aase Rokkan<br />
 
 <b>Illustrasjonsansvarlig</b> Ida Neverdahl<br />
 
@@ -361,13 +341,14 @@ function hasScrolled() {
 
 <b>Grafikere</b> Ida Woldsund og Frida Annette Helseth Strømme<br />
 
-<b>Fotoredaktør</b> Maiken Larsen Solholmvik<br />
+<b>Fotoredaktør</b> Henrik Follesø Egeland<br />
 
 <b>Fotografer</b> Fredrik Geving Bedsvaag, Henrik Follesø Egeland, Petter Lysgaard<br />
 
-<b>Redaksjon</b> Mathias Juell Johnsen, Olve Hagen Wold, Tellef Solbakk Raabe, Audun Brendbekken, Lisa Aase Rokkan, Mats Vederhus, Ingeborg Katie Åtland, Torbjørn Sandmo, Ola Olsen Lysgaard, Martin Hjelle, Tellef Raabe, Anna Eitrem, Camilla Iversen<br /><br />
+<b>Redaksjon</b> Mathias Juell Johnsen, Olve Hagen Wold, Tellef Solbakk Raabe, Audun Brendbekken, Lisa Aase Rokkan, Mats Vederhus, Ingeborg Katie Åtland, Torbjørn Sandmo, Ola Olsen Lysgaard, Martin Hjelle, Tellef Raabe, Anna Eitrem, Camilla Iversen
+</p>
 
-<div style="font-family: 'Ludacrys'; font-size: 26px; padding: 15px; text-align: center; background-color: black; color: white;">Ønsker du å annonsere i Stoff? Ta kontakt på <a href="mailto:red@stoffmagasin.no" style="color: white !important;"> red@stoffmagasin.no</a></div>
+
 
     </div>
   </div>
