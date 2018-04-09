@@ -18,14 +18,6 @@ Template Name: Samfunn
 
 get_header(); 
 
-if ( has_post_thumbnail() ) {
-    $featuredUrl = get_the_post_thumbnail_url();
-    list($width, $height, $type, $attr) = getimagesize( $featuredUrl );
-    $aspectRatio = $width / $height;
-} else {
-    $aspectRatio = 2;
-}
-
 if ( isset( $_GET['kategori'] ) ) {
   $categoryName = $_GET['kategori'];
 } else {
@@ -57,9 +49,6 @@ if ( $arr_posts->have_posts() ) :
                 } elseif ( empty( get_post_format() ) ) {
                     require( get_template_directory() . '/template-parts/content-standard.php' );
                 // fetch aspect ratio and give wide layout for wide pictures
-                } elseif ( $aspectRatio > 3 ) {
-                    require( get_template_directory() . '/template-parts/content-chat.php' );
-                // else we can fetch template file for the format, e.g. content-aside.php for cover (renamed in functions.php)
                 } else {
                     get_template_part('template-parts/content', get_post_format() ); 
                 }
