@@ -18,14 +18,6 @@ Template Name: Debatt
 
 get_header(); 
 
-if ( has_post_thumbnail() ) {
-    $featuredUrl = get_the_post_thumbnail_url();
-    list($width, $height, $type, $attr) = getimagesize( $featuredUrl );
-    $aspectRatio = $width / $height;
-} else {
-    $aspectRatio = 2;
-}
-
 if ( isset( $_GET['kategori'] ) ) {
   $categoryName = $_GET['kategori'];
 } else {
