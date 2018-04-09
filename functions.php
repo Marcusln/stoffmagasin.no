@@ -39,7 +39,7 @@ function stoffu_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	set_post_thumbnail_size( 50, 50, false );
+	set_post_thumbnail_size( 150, 150, false );
 	add_image_size( 'small', 350, 300 );
 	add_image_size( 'medium', 600, 1200 ); 
 	add_image_size( 'large', 2000, 1500 ); 
