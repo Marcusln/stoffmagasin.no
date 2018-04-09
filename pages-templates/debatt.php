@@ -49,9 +49,6 @@ if ( $arr_posts->have_posts() ) :
                 } elseif ( empty( get_post_format() ) ) {
                     require( get_template_directory() . '/template-parts/content-standard.php' );
                 // fetch aspect ratio and give wide layout for wide pictures
-                } elseif ( $aspectRatio > 3 ) {
-                    require( get_template_directory() . '/template-parts/content-chat.php' );
-                // else we can fetch template file for the format, e.g. content-aside.php for cover (renamed in functions.php)
                 } else {
                     get_template_part('template-parts/content', get_post_format() ); 
                 }
