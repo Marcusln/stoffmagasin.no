@@ -77,23 +77,6 @@ get_header();
             }
 
             while ($the_query_nonsticky->have_posts()) : $the_query_nonsticky->the_post(); 
-
-if ( has_post_thumbnail() ) {
-    $featuredUrl = get_the_post_thumbnail_url();
-    $getImageSize = getimagesize( $featuredUrl );
-    list($width, $height, $type, $attr) = $getImageSize;
-    $aspectRatio = $width / $height;
-
-    if ( $aspectRatio > 1.08 ) {
-        update_field( 'field_5a9de66d2f548', 'landskap' );
-    } else {
-        update_field( 'field_5a9de66d2f548', 'portrett' );
-    }
-
-} else {
-  update_field( 'field_5a9de66d2f548', 'na' );
-}
-
                 
                 // these posts have drawings which is best a bit smaller than usual
                 if ( in_category( 'bergen-revels' ) or in_category( 'quiz' ) or in_category( 'leder' ) ) {
