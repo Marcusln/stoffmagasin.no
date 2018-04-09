@@ -5,7 +5,8 @@
     </a>
   </div>
   <div>
-  	<a id="menu-icon-mobile" class="" style="height: 100%; width: 50px;">
+  	<a id="menu-icon-mobile" class="" style="height: 100%; width: 50px;
+  	">
         <i class="fa fa-bars topbar-icon" style="padding: 0 15px 0 3px; color: black;"></i>
       </a>
   </div>
