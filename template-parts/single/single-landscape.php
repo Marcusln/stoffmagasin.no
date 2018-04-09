@@ -83,9 +83,12 @@ $dateMonthNoZero = get_the_date( 'n' );
 	 
 </script>
 
+<!--
 <div style="height: 95vw; width: 95vw; display: flex; align-items: center; justify-content: center;">
 	<img src="" style="display: flex; padding: 50px;">
 </div>
+
+-->
 
 <!-- TEKST -->
 <!-- Litt lysere bg-color: #FCFBF8 -->
