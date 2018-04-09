@@ -120,9 +120,8 @@ elseif ( $aspectRatio > 2.6 ) {
         endif; 
     wp_reset_query();
 
-    ?>
-
-        <div id="next-issue-nav" class="frontpage-margin neste-utgave feed-item component portrait neste-utgave" style="background-color: #f9f7f1 !important; box-shadow: none !important; ">
+    if ($currentIssue > 1) {
+        ?> <div id="next-issue-nav" class="frontpage-margin neste-utgave feed-item component portrait neste-utgave" style="background-color: #f9f7f1 !important; box-shadow: none !important; ">
         <a class="no-decoration frontpage-margin neste-utgave feed-item component portrait" href="<?php echo $linkPrevious ?>" style="background-color: #f9f7f1 !important; ">
           <div id="line-button" class="to-next-issue feed-text-container" style="flex: 2 !important; text-align: center; padding: 15px 0;" >
                 <span class="nestensvart" style="white-space: nowrap; ">Gå til utgave <div style="font-family: 'Ludacrys', serif; display: inline;"> #</div><?php echo $previousIssue; ?></span>
@@ -132,6 +131,8 @@ elseif ( $aspectRatio > 2.6 ) {
           </div>
         </a>
         </div>
+        <?php
+    } ?>
 
         <!-- <span style="white-space: nowrap;">utgave <i class="fa fa-angle-right rotate-mobile" style="font-weight: 400; padding-left: 10px;" aria-hidden="true"></i></span> -->
 
