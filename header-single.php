@@ -76,9 +76,6 @@
       <a id="search-link" onclick="" class="" style="">
         <i id="search-icon" class="cursor-pointer-hover fa fa-times topbar-icon" style="padding: 0 3px 0 3px; font-size: 1.3rem; margin-top: 5px;"></i>
       </a>
-      <a class="" style="">
-        <i id="hamburger-icon" class="fa fa-bars topbar-icon" style="padding: 0 3px 0 3px; font-size: 1.3rem; margin-top: 5px;"></i>
-      </a>
     </div>
   </div>
   <div style="height: 20vh;"></div>
