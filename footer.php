@@ -30,7 +30,7 @@
         </a> 
   	</div><br /><br />
 
-		<span>Stoff arbeider etter Vær Varsom-plakatens regler for god presseskikk, og får støtte fra Velferdstinget i Bergen.<br /><br />Ansvarlig redaktør: Ingrid Marie Vikhammer Sandvik. Nettredaktør: Joakim Knudsen<br />Utviklet av Marcus Lauritsen<br />&copy; Stoff 2018</span>
+		<span>Stoff arbeider etter Vær Varsom-plakatens regler for god presseskikk, og får støtte fra Velferdstinget i Bergen.<br />Ansvarlig redaktør: Ingrid Marie Vikhammer Sandvik. Nettredaktør: Joakim Knudsen<br />Utviklet av Marcus Lauritsen<br />&copy; Stoff 2018</span>
 	</div>
 </div>
 <!--
