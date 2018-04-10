@@ -43,7 +43,7 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>"></link>
+<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?v1"></link>
 
 <?php wp_head(); ?>
 </head>
