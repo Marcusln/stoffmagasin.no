@@ -64,7 +64,7 @@ $dateMonthNoZero = get_the_date( 'n' );
         imgLarge.src = $(this).attr('data-large');
         imgLarge.onload = function () {
              imgLarge.classList.add('loaded');
-             imageContainer.css('opacity', '');
+             imageContainer.css('opacity', '0');
         };
         parentContainer.append(imgLarge)
        
