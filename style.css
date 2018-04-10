@@ -2475,7 +2475,7 @@ h6 strong {
     text-align: left;
   }
   .footer {
-    padding: 0 5px 0 5px;
+    padding: 0 3px;
   }
 }
 
@@ -2932,3 +2932,35 @@ a .nav-item .nav-link .active .meny-this {
   background-color: #f9f7f1;
   transition: background-color 200ms ease-in-out, border-bottom 500ms ease-in-out;
 }
+
+.img-right {
+    position: relative;
+    left: auto;
+    width: 100%;
+}
+
+@media (min-width: 1366px) {
+  .img-right {
+    position: absolute;
+    left: 750px;
+    width: calc(100vw - 15vw - 750px - 50px);
+  }
+}
+
+.img-right img {
+  width: 100%;
+  height: auto;
+}
+
+.img-right figcaption {
+  padding: 0 6px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #1a1a1a;
+}
+
+
+
+
+
