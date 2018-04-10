@@ -41,7 +41,7 @@ $month = $months[get_the_date('n')];
 
 <article id="cover" class="hidden-sm-down feed-item component cover feed-box-border frontpage-margin" style="background-color: black; box-shadow: 3px 5px #f0ebdb;">
 <a class="feed-item component cover feed-box-border frontpage-margin" href="<?php echo $postUrl; ?>" style="text-decoration: none; color: black; background-color: black;">
-  <div class="feed-image-container" style="background-color: black !important; max-height: 70vh;">
+  <div class="feed-image-container" style="background-color: white !important; max-height: 70vh;">
     <img style="" class="feed-image inline img-fluid" style="" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>">
   </div>
   <div class="feed-text-container" style="background-color: black;" >
