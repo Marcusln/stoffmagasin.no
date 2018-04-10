@@ -109,6 +109,8 @@ $dateMonthNoZero = get_the_date( 'n' );
 				</span>
 			</div>
 				<!-- lead paragraph fetched from h4 tags via jquery script below. or else insert excerpt-->
+				<?php if ( has_excerpt() ) {
+				?>
 				<span id="ingress" style="font-family: 'Arapey', serif; font-size: 33px; font-weight: 400; line-height: 40px; letter-spacing: 1px;">
 
 				<?php
@@ -138,6 +140,7 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 				}
 				?>
 			</span>
+			<?php } ?>
 
 		<div id="byline" class="" style="padding: 15px 0;">
 
@@ -210,6 +213,8 @@ $(window).scroll(function() {
 		</span><br />
 
 		<!-- lead paragraph fetched from h4 tags via jquery script below. or else insert excerpt-->
+				<?php if ( has_excerpt() ) {
+				?>
 				<span id='ingress' style="font-family: 'Arapey', serif; font-size: 20px; font-weight: 400; line-height: 26px; margin-bottom: 0 !important;">
 
 				<?php
@@ -238,6 +243,7 @@ $(window).scroll(function() {
 				}
 				?>
 				</span>
+				<?php } ?>
 	</div>
 
 		<div id="byline" class="" style="padding-bottom: 15px;">
