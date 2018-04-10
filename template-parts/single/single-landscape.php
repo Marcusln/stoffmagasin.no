@@ -71,6 +71,7 @@ $dateMonthNoZero = get_the_date( 'n' );
         imgLarge.src = $(this).attr('data-large');
         imgLarge.onload = function () {
              imgLarge.classList.add('loaded');
+             imageContainer.css('opacity', '0');
         };
         parentContainer.append(imgLarge)
        
@@ -164,14 +165,6 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 				?>
 			</span>
 		</div>
-
-		<!-- 
-
-<div style="position: absolute; left: calc(15vw + 800px); width: calc(100vw - 15vw - 800px - 50px);">
-	<img src="/wp-content/uploads/SveinMoxvold_GoodPeople-Bergen_001.jpg" style="width: 100%; height: auto;" alt="" />
-</div>
-
--->
 
 		<div id="article-content" class="" style="font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
 			<?php the_content() ?>
