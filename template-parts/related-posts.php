@@ -31,14 +31,14 @@ $month = $months[get_the_date('n')];
   </div>
 </div>
 
-<article class="hidden-md-up frontpage-margin feed-item component portrait feed-box-border" style="margin-top: 30px; margin-bottom: 30px;">
-<a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $prevPostUrl; ?>" style="">
+<article class="hidden-md-up frontpage-margin feed-item component portrait" style="margin-top: 30px; margin-bottom: 30px;">
+<a class="no-decoration frontpage-margin feed-item component portrait" href="<?php echo $prevPostUrl; ?>" style="">
    <div class="feed-image-container" style="">
       <img style="" class="feed-image inline img-fluid" src="<?php echo $prevThumbnail; ?>">
   </div>
   <div class="feed-text-container" style="" >
-        <span class="nestensvart overskrift"><?php echo $prevPost->post_title ?></span><br style="line-height: 2vh;">
-        <span class="graytext byline"><?php echo $prevExcerptTrimmed ?></span>
+        <span class="nestensvart overskrift" style="font-size: 26px !important;"><?php echo $prevPost->post_title ?></span><br style="line-height: 2vh;">
+        <span class="graytext byline" style="font-size: 16px !important; line-height: 1.25;"><?php echo $prevExcerptTrimmed ?></span>
   </div>
 </a>
 </article>
