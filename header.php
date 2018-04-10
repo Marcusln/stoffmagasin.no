@@ -42,7 +42,7 @@
   <link rel="profile" href="http://gmpg.org/xfn/11">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>"></link>
+  <link rel="stylesheet" href="/wp-content/themes/stoffu/style.css"></link>
 
 <?php wp_head(); ?>
 
@@ -51,6 +51,7 @@
 <body>
 
 <?php include( get_template_directory() . '/menu-fullscreen.php' ); ?>
+
 
 <!-- PAPIRUTGAVE
 <style type="text/css">
@@ -142,11 +143,26 @@
 
   <!-- Top bar  -->
 
+<?php
+      if ( isset( $_GET['utgave'] ) ) {
+        $currentIssue = $_GET['utgave'];
+      } else {
+        $currentIssue = 22;
+      }
+
+      if ( $currentIssue < 7 ) {
+        $yearIssue = 1;
+      } elseif ( $currentIssue > 6 and $currentIssue < 17 ) {
+        $yearIssue = 2;
+      } elseif ( $currentIssue > 16 and $currentIssue < 28 ) {
+        $yearIssue = 3;
+      }
+?>
 <div id="topbar" class="hidden-md-down fixed-top" style="opacity: 0.98; width: 100vw; height: 50px; display: flex; align-items: center; justify-content: space-between; z-index: 1000; border-bottom: 1px solid transparent;">
 
     <div id="" class="cursor-pointer-hover" style="margin-left: 20px; width: calc(13vw - 30px);">
       <a href="/index.php" id="logo-link" class="initiallyHidden"><img id="headerLogo" src="/wp-content/uploads/2017/04/stoff.png" style="height: 35px; padding: 5px; filter: none; z-index: 1001;"></a>
-      <a id="papirutgave-klikk" class="papirutgave-knapp bg-color-paper" href="https://issuu.com/stoffmagasin" target="_blank" style="padding: 5px;">Nr. 23 &nbsp;&nbsp;&nbsp;3. årgang <!--&nbsp;&nbsp;<i id="papirutgave-ikon" class="fa fa-chevron-down" style="font-weight: 100;" aria-hidden="true"></i>--></a>
+      <a id="papirutgave-klikk" class="papirutgave-knapp bg-color-paper" href="https://issuu.com/stoffmagasin" target="_blank" style="padding: 5px;">Nr. <?php echo $currentIssue; ?> &nbsp;&nbsp;&nbsp;<?php echo $yearIssue; ?>. årgang <!--&nbsp;&nbsp;<i id="papirutgave-ikon" class="fa fa-chevron-down" style="font-weight: 100;" aria-hidden="true"></i>--></a>
     </div>
 
   <div id="topbar-categories" class="hide" style="width: 100vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; flex-direction: row; font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 30px auto 25px auto;">
