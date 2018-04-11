@@ -147,7 +147,7 @@
       if ( isset( $_GET['utgave'] ) ) {
         $currentIssue = $_GET['utgave'];
       } else {
-        $currentIssue = 22;
+        $currentIssue = 23;
       }
 
       if ( $currentIssue < 7 ) {
