@@ -2945,6 +2945,14 @@ a .nav-item .nav-link .active .meny-this {
     left: 750px;
     width: calc(100vw - 15vw - 750px - 50px);
   }
+  .img-right.img-small {
+    left: 850px;
+    width: calc(100vw - 15vw - 750px - 100px);
+    max-width: 350px;
+  }
+  .img-right.img-small img {
+    margin: 0 auto;
+  }
 }
 
 .img-right img {
@@ -2958,9 +2966,6 @@ a .nav-item .nav-link .active .meny-this {
   font-size: 16px;
   color: white;
   background-color: #1a1a1a;
+  line-height: 1.5;
 }
-
-
-
-
 
