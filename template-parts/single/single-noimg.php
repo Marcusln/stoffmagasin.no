@@ -20,20 +20,24 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 <!-- TEKST -->
 <!-- Litt lysere bg-color: #FCFBF8 -->
-<article id="textbox-article" class="container hidden-md-down" class="" style="margin-left: 15vw; margin-top: 100px; width: 800px; border-left: 1px solid darkgray; position: relative;">
+<article id="textbox-article" class="single-textbox hidden-md-down" class="" style="margin: 100px 0 0 15vw; padding: 50px 50px 0 40px; width: 750px; border-left: 1px solid darkgray; position: relative;">
 	<span class="gray" style="font-family: 'Ludacrys'; font-size: 18px; transform: rotate(-90deg); position: absolute; left: -65px; top: 50; letter-spacing: 3px;">
 		<?php echo $dateDay . '.' . $dateMonth . '.' . $dateYear ?>
 	</span>
 
-	<div class="" style="background-color: #f9f7f1; border-bottom: 7px solid #f0ebdb; margin-top: 25px 0 50px 0; padding: 50px 25px;"><!-- border and padding -->
+	<div class="" style="background-color: #f9f7f1; border-bottom: 7px solid #f0ebdb;">
 
 			<span class="graytext kategori">
             	<?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?>
         	</span><br />
-			<span class="overskrift-single" style="font-family: 'Ludacrys'; font-size: 90px; line-height: 110px;">
-				<?php echo $postTitle; ?>
-			</span><br />
+			<div style="width: 800px;">
+				<span class="overskrift-single" style="font-family: 'Ludacrys'; font-size: 90px; line-height: 110px;">
+					<?php echo $postTitle; ?>
+				</span>
+			</div>
 				<!-- lead paragraph fetched from h4 tags via jquery script below. or else insert excerpt-->
+				<?php if ( has_excerpt() ) {
+				?>
 				<span id="ingress" style="font-family: 'Arapey', serif; font-size: 33px; font-weight: 400; line-height: 40px; letter-spacing: 1px;">
 
 				<?php
@@ -63,6 +67,7 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 				}
 				?>
 			</span>
+			<?php } ?>
 
 		<div id="byline" class="" style="padding: 15px 0;">
 
@@ -91,7 +96,7 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 			</span>
 		</div>
 
-		<div id="article-content" class="single-textbox" style="max-width: calc(100% - 50px); font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
+		<div id="article-content" class="" style="font-size: 18px; line-height: 33px; font-family: 'Roboto', sans-serif; padding-bottom: 50px;">
 			<?php the_content() ?>
 		</div>
 	</div>
@@ -124,7 +129,7 @@ $(window).scroll(function() {
 
 <!-- Mobile article -->
 
-<article id="textbox-article" class="single-textbox hidden-lg-up" style="margin-top: 100px;">
+<article id="textbox-article" class="single-textbox hidden-lg-up">
 	<div id="title-intro" style="padding: 15px 0;">
 		<span class="graytext kategori" style="font-size: 14px;">
           		<?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?>
@@ -135,6 +140,8 @@ $(window).scroll(function() {
 		</span><br />
 
 		<!-- lead paragraph fetched from h4 tags via jquery script below. or else insert excerpt-->
+				<?php if ( has_excerpt() ) {
+				?>
 				<span id='ingress' style="font-family: 'Arapey', serif; font-size: 20px; font-weight: 400; line-height: 26px; margin-bottom: 0 !important;">
 
 				<?php
@@ -163,6 +170,7 @@ $(window).scroll(function() {
 				}
 				?>
 				</span>
+				<?php } ?>
 	</div>
 
 		<div id="byline" class="" style="padding-bottom: 15px;">
@@ -202,6 +210,7 @@ $(window).scroll(function() {
 
 <!-- RELATED ARTICLES -->
 <?php require( get_template_directory() . '/template-parts/related-posts.php' ); ?>
+
 
 
 <?php get_footer() ?>

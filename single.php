@@ -10,8 +10,7 @@
 
 ?>
 
-	<div id="primary" class="">
-		<main id="main" class="infinite-scroll" role="main">
+		
 
 		<?php
 		while ( have_posts() ) : the_post();
@@ -24,8 +23,8 @@
 		?>
 
 		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 
 get_footer( 'single' );
+

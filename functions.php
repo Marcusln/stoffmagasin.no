@@ -147,29 +147,6 @@ function rename_post_formats($translation, $text, $context, $domain) {
 }
 add_filter('gettext_with_context', 'rename_post_formats', 10, 4);
 
-/*
-add_theme_support( 'infinite-scroll', array(
-    'container'  => 'content',
-    'footer' => false,
-    'render' => 'infinite_scroll_render',
-    'wrapper' => false
-) ); */
-/*
-function render_function() {
-    get_template_part('content.php');
-}
-*/
-/*
-
-function infinite_scroll_render(){
-	while ( have_posts() ) : the_post();
-
-  get_template_part( 'template-parts/content', get_post_format() );
-
-  	endwhile;
-}
-*/
-
 // make previous and next post link work
 ini_set( 'mysql.trace_mode', 0 );
 
@@ -237,13 +214,11 @@ add_action('wp_print_styles', 'jeherve_remove_all_jp_css' );
 
 // remove jquery, loaded in footer instead
 
+
 if (!is_admin()) add_action("wp_enqueue_scripts", "my_jquery_enqueue", 11);
 function my_jquery_enqueue() {
    wp_deregister_script('jquery');
-   wp_register_script('jquery', "//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js", false, null);
-   wp_enqueue_script('jquery');
 }
-
 
 function be_post_type_connections() {
 	p2p_register_connection_type( array(

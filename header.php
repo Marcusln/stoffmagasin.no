@@ -43,6 +43,10 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/wp-content/themes/stoffu/style.css"></link>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
 <?php wp_head(); ?>
 
@@ -327,7 +331,7 @@ function hasScrolled() {
 
   <div class="om-oss-text" style="display: flex; flex-wrap: nowrap;">
     <div class="hidden-md-down col-6 "  style="display: flex; flex-direction: column; text-align: justify; font-family: 'Arapey', serif; font-size: 18px; line-height: 30px; font-weight: 400;">
-      <p style="">Stoff <a class="underline" href="https://www.dn.no/etterBors/2015/03/10/2157/Medier/studentavisopprr-i-bergen" target="_blank">ble</a> <a class="underline" href="http://www.nattogdag.no/2015/03/stoff-magasin-pungshots-dekning-og-kvalitetsjournalistikk/" target="_blank">startet</a> <a class="underline" href="http://www.bt.no/folk/Lager-avis-fra-hybelen-3328137.html?xtor=RSS-2" target="_blank">tidlig</a> i 2015 av en gjeng NHH-studenter som ønsket å lage en unik, uavhengig og uredd studentavis. Første utgave ble lansert 20.03.15. Avisen satser på dyptgående, modig og kreativ journalistikk innenfor kultur, økonomi og samfunn. Stoff består av studenter fra hele student-Bergen som jobber frivillig og ulønnet som journalister, fotografer og grafikere. Redaksjonen har erfaring fra andre store aviser som blant annet Dagens Næringsliv, Bergens Tidende, Aftenposten og Finansavisen.</p>
+      <p style="">Stoff <a class="underline" href="https://www.dn.no/etterBors/2015/03/10/2157/Medier/studentavisopprr-i-bergen" target="_blank">ble</a> <a class="underline" href="http://www.nattogdag.no/2015/03/stoff-magasin-pungshots-dekning-og-kvalitetsjournalistikk/" target="_blank">startet</a> <a class="underline" href="https://www.bt.no/nyheter/lokalt/i/kp8ev/Lager-avis-fra-hybelen" target="_blank">tidlig</a> i 2015 av en gjeng NHH-studenter som ønsket å lage en unik, uavhengig og uredd studentavis. Første utgave ble lansert 20.03.15. Avisen satser på dyptgående, modig og kreativ journalistikk innenfor kultur, økonomi og samfunn. Stoff består av studenter fra hele student-Bergen som jobber frivillig og ulønnet som journalister, fotografer og grafikere. Redaksjonen har erfaring fra andre store aviser som blant annet Dagens Næringsliv, Bergens Tidende, Aftenposten og Finansavisen.</p>
 
       <p style="">
         Stoff blir utgitt i fire papirutgaver i hvert akademiske semester, og blir distribuert i Bergen.

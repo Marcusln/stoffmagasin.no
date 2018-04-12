@@ -24,10 +24,12 @@
  */
 
 ?>
+    
 
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> viewport-fit="cover">
 <head>
+
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115473596-1"></script>
 <script>
@@ -43,13 +45,44 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?v2"></link>
+<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?v=2"></link>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
-<?php wp_head(); ?>
+<?php 
+
+    $title = get_bloginfo('title');
+    $img_src = get_stylesheet_directory_uri() . '/images/your_default_image_here.jpg';
+    $excerpt = get_bloginfo('description');
+    // for non posts/pages, like /blog, just use the current URL
+    $permalink = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    if(is_single() || is_page()) {
+        global $post;
+        setup_postdata( $post );
+        $title = get_the_title();
+        $permalink = get_the_permalink();
+        if (has_post_thumbnail($post->ID)) {
+            $img_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large')[0];
+        }
+        $excerpt = get_the_excerpt();
+        if ($excerpt) {
+            $excerpt = strip_tags($excerpt);
+            $excerpt = str_replace("", "'", $excerpt);
+        }
+    }
+    ?>
+
+<meta property="og:title" content="<?= $title; ?>" />
+<meta property="og:description" content="<?= $excerpt; ?>" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="<?= $permalink; ?>" />
+<meta property="og:image" content="<?= $img_src; ?>" />
+
 </head>
 
 <body>
-
 <!-- FULLSCREEN SEARCH -->
 
 <div id="fullscreenSearch" class="initiallyHidden hidden-md-down" style="width: 100vw; height: 100vh; position: fixed; background-color: #f9f7f1; z-index: 1001;">
@@ -140,7 +173,7 @@ min-height: calc(100vh - 120px);
 <script>
 $(function() {
   $('#topbar .fa-search').click(function(e) {
-      e.stopPropagation()
+      e.stopPropagation();
       $('#fullscreenSearch').fadeIn('fast');
       $('#search-icon').addClass('fa-times');
       $('#search-icon').css({'font-size' : '30px', 'padding-right' : '25px', 'color' : 'black'});
@@ -151,7 +184,7 @@ $(function() {
 
 $(function() {
   $('#search-link').click(function(e) {
-    e.stopPropagation()
+    e.stopPropagation();
     $('#fullscreenSearch').fadeOut('fast');
     $('#search-icon').addClass('fa-search');
     $('#search-icon').removeClass('fa-times');

@@ -2,7 +2,7 @@
 /**
  * Template file for single article. Loaded when set manually in Wordpress editor, or if aspect ratio for feature image is bigger than 1.08.
  */
-get_header( 'single' );
+require(get_template_directory() . '/header-single.php' );
 
 $featuredUrl = get_the_post_thumbnail_url();
 $postTitle = get_the_title();
@@ -16,20 +16,18 @@ $dateYear = get_the_date('Y');
 $dateMonthNoZero = get_the_date( 'n' );
 
 // bakgrunnsfarge overskrift osv: background-color: rgb(17,17,17);
-
-?>
+?> 
 
 <!-- FEATURED IMAGE -->
 
 
-
-<header class="hidden-md-down" style="width: 100%; height: 100%; padding-top: 54px; max-width: 100%;">
+<div class="hidden-md-down" style="width: 100%; height: 100%; padding-top: 54px; max-width: 100%;">
 	<div id="" style="width: calc(100%); height: calc(100% - 50px); display: flex;  margin-top: 25px; padding-left: 50px; padding-right: 50px;">
 		<div class="blurry-load-container" style="flex: 1;">
 			<img class="featured-img image-blur" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>"  style="height: 100%; object-fit: contain;">
 		</div>
 	</div>
-</header>
+</div>
 
 <div class="hidden-lg-up" style="margin-top: 53px;">
 	<img style="width: 100%; height: auto;" src="<?php the_post_thumbnail_url( array( 991,9999 ) ); ?>">
@@ -283,8 +281,6 @@ $(window).scroll(function() {
 
 <!-- RELATED ARTICLES -->
 <?php require( get_template_directory() . '/template-parts/related-posts.php' ); ?>
-
-
 
 <?php get_footer() ?>
 

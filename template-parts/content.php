@@ -27,12 +27,16 @@ if ( $getImageSize ) {
 		// checks if article is single, ie. not on home page
 
 		if ( is_single() ) {  
+			 
 
 			// fetches field from advanced custom field plugin, a required field in wordpress editor. Can be portrett, vanlig or fullbredde. Requires respective template from file.
 			if ( get_field( 'layout' ) == 'portrett' ) { 
 				require(get_template_directory() . '/template-parts/single/single-portrait.php' );
 			} elseif ( get_field( 'layout' ) == 'landskap' or 'chat' == get_post_format() ) { // 
 				require( get_template_directory() . '/template-parts/single/single-landscape.php' );
+			// if layout set to no img, e.g. bergen revels or similar
+			} elseif ( get_field( 'layout' ) == 'na' ) { 
+				require( get_template_directory() . '/template-parts/single/single-noimg.php' );
 			// if an article doesnt have a featured img
 			} elseif ( !has_post_thumbnail() ) { // 
 				require( get_template_directory() . '/template-parts/single/single-noimg.php' );
