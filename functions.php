@@ -39,10 +39,9 @@ function stoffu_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	set_post_thumbnail_size( 150, 150, false );
-	add_image_size( 'small', 350, 300 );
-	add_image_size( 'medium', 600, 1200 ); 
-	add_image_size( 'large', 2000, 1500 ); 
+	add_image_size( 'small', 400, 9999 );
+	add_image_size( 'medium-large', 900, 9999 ); 
+	add_image_size( 'large', 2000, 9999 ); 
 
 
 	// This theme uses wp_nav_menu() in one location.
