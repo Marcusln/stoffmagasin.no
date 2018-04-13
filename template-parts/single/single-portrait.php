@@ -26,7 +26,7 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 <div class="hidden-md-down">
 
-<header style="width: 100%; height: 100%; padding-top: 54px; max-width: 100%;">
+<header style="width: 100vw; height: 100vh; padding-top: 54px; max-width: 100%;">
 	<div style="width: calc(100%); height: calc(100% - 50px); display: flex;  margin-top: 25px; padding-left: 50px; padding-right: 50px;">
 		<div class="blurry-load-container" style="flex: 1;">
 			<img class="featured-img image-blur" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>"  style="height: 100%; object-fit: contain;">
@@ -86,7 +86,11 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 	<div class="" style="background-color: #f9f7f1; border-bottom: 7px solid #f0ebdb;">
 				<!-- lead paragraph fetched from h4 tags via jquery script below. or else insert excerpt-->
-				<span id="ingress" style="font-family: 'Arapey', serif; font-size: 33px; font-weight: 400; line-height: 40px; letter-spacing: 1px;">
+				<?php if ( get_field( 'ingress' ) == 'hidden' ) {
+					# do nothing
+				} else {
+					?>
+					<span id="ingress" style="font-family: 'Arapey', serif; font-size: 33px; font-weight: 400; line-height: 40px; letter-spacing: 1px;">
 
 				<?php
 
@@ -115,6 +119,8 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 				}
 				?>
 			</span>
+			<?php } ?>
+				
 
 		<div id="byline" class="" style="padding: 15px 0;">
 
