@@ -1,6 +1,6 @@
 <?php
 /**
- * Template file for single article. Loaded when set manually in Wordpress editor, or if aspect ratio for feature image is bigger than 1.08.
+ * Template file for single article. Loaded when set manually in Wordpress editor via advanced custom fields
  */
 require(get_template_directory() . '/header-single.php' );
 
@@ -20,8 +20,7 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 <!-- FEATURED IMAGE -->
 
-
-<div class="hidden-md-down" style="width: 100%; height: 100%; padding-top: 54px; max-width: 100%;">
+<div class="hidden-md-down" style="width: 100vw; height: 100vh; padding-top: 54px; max-width: 100%;">
 	<div id="" style="width: calc(100%); height: calc(100% - 50px); display: flex;  margin-top: 25px; padding-left: 50px; padding-right: 50px;">
 		<div class="blurry-load-container" style="flex: 1;">
 			<img class="featured-img image-blur" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>"  style="height: 100%; object-fit: contain;">
