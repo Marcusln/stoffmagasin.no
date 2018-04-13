@@ -33,7 +33,7 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-115473596-1');
+  gtag('config', 'UA-62250971-1');
 </script>
 
   <meta charset="<?php bloginfo( 'charset' ); ?>">
