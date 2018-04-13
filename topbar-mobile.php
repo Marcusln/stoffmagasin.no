@@ -12,7 +12,7 @@
   </div>
 </div>
 
-<div id="fullscreen-menu-mobile" class=" hidden-lg-up initiallyHidden" style="width: 100vw; height: 120vh; background-color: black; z-index: 1030; position: fixed;">
+<div id="fullscreen-menu-mobile" class=" hidden-lg-up initiallyHidden" style="width: 100vw; height: 120vh; background-color: black; z-index: 1030; position: fixed; top: 50px;">
 	<div id="" class="fixed-top hidden-lg-up" style="background-color: black; width: 100%; height: 50px; display: flex; justify-content: space-between; align-items: center;">
 	  <div class="">
 	    <a href="/index.php">
