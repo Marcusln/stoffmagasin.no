@@ -31,8 +31,8 @@ $dateMonthNoZero = get_the_date( 'n' );
 		<div class="blurry-load-container" style="flex: 1;">
 			<img class="featured-img image-blur" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>" data-large="<?php the_post_thumbnail_url( 'full' ); ?>"  style="height: 100%; object-fit: contain;">
 		</div>
-		<div class="" style="flex: 1; display: flex; justify-content: center; align-items: center;">
-			<span class="overskrift-single hyphenate" style="padding-left: 50px; font-family: 'Ludacrys'; font-size: 110px;">
+		<div class="" style="flex: 1; display: flex; justify-content: center; align-items: center; margin-top: -100px;">
+			<span class="overskrift-single hyphenate" style=" padding-left: 50px; font-family: 'Ludacrys'; font-size: 100px; line-height: 1.2;">
 				<span class="graytext kategori">
             		<?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?>
         		</span><br />
