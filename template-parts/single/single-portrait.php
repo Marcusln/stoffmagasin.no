@@ -34,7 +34,11 @@ $dateMonthNoZero = get_the_date( 'n' );
 		<div class="" style="flex: 1; display: flex; justify-content: center; align-items: center; margin-top: -100px;">
 			<span class="overskrift-single hyphenate" style=" padding-left: 50px; font-family: 'Ludacrys'; font-size: 100px; line-height: 1.2;">
 				<span class="graytext kategori">
-            		<?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?>
+            		<?php if ( get_field( 'emneknagg' ) ) {
+            			echo get_field( 'emneknagg' );
+            		} else {
+            			require(get_template_directory() . '/template-parts/emneknagg.php');
+            		} ?>
         		</span><br />
         	<?php the_title(); ?>
         	</span>
@@ -213,7 +217,7 @@ $(window).scroll(function() {
 
 <!-- Mobile article -->
 
-<header class="header hidden-lg-up" style="">
+<header class="header hidden-lg-up" style="margin-top: 76px;">
 	<img class="featured-img-mobile" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>" style="">
 </header>
 
@@ -222,7 +226,11 @@ $(window).scroll(function() {
 <article id="textbox-article" class="single-textbox hidden-lg-up">
 	<div id="title-intro" style="padding: 15px 0;">
 		<span class="graytext kategori" style="font-size: 14px;">
-          		<?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?>
+          		<?php if ( get_field( 'emneknagg' ) ) {
+            			echo get_field( 'emneknagg' );
+            		} else {
+            			require(get_template_directory() . '/template-parts/emneknagg.php');
+            		} ?>
        	</span><br />
 	
 		<span class="overskrift-single" style="font-family: 'Ludacrys'; font-size: 33px; line-height: 1.5;">
