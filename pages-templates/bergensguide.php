@@ -32,6 +32,10 @@ Template Name: Bergensguide
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> viewport-fit="cover">
 <head>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115473596-1"></script>
 <script>
@@ -47,7 +51,7 @@ Template Name: Bergensguide
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?<?php echo date('l jS \of F Y h:i:s A'); ?>"></link>
+<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css"></link>
 
 <?php wp_head(); ?>
 </head>
@@ -137,7 +141,7 @@ min-height: calc(100vh - 120px);
 <script>
 $(function() {
   $('#topbar .fa-search').click(function(e) {
-      e.stopPropagation()
+      e.stopPropagation();
       $('#fullscreenSearch').fadeIn('fast');
       $('#search-icon').addClass('fa-times');
       $('#search-icon').css({'font-size' : '30px', 'padding-right' : '25px', 'color' : 'black'});
@@ -148,7 +152,7 @@ $(function() {
 
 $(function() {
   $('#search-link').click(function(e) {
-    e.stopPropagation()
+    e.stopPropagation();
     $('#fullscreenSearch').fadeOut('fast');
     $('#search-icon').addClass('fa-search');
     $('#search-icon').removeClass('fa-times');
