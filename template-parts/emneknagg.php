@@ -18,11 +18,15 @@
               }
               elseif ( in_category('samfunn') ) {
               echo "SAMFUNNSSTOFF";
-              }
-              elseif ( in_category( 'manedens-debutant' ) && in_category( 'kultur' ) ) {
-              echo "MÅNEDENS DEBUTANT";
-              }
-              elseif ( in_category('kultur') ) {
+              } elseif ( in_category('film') ) {
+              echo "FILMSTOFF";
+              } elseif ( in_category('anmeldelser') ) {
+              echo "ANMELDELSE";
+              } elseif ( in_category('musikk') ) {
+              echo "MUSIKKSTOFF";
+              } elseif ( in_category('kunst') ) {
+              echo "KUNSTSTOFF";
+              } elseif ( in_category('kultur') ) {
               echo "KULTURSTOFF";
               }
               elseif ( in_category('økonomi') ) {
@@ -38,7 +42,7 @@
               echo "BERGEN REVELS";
               }
               elseif ( in_category('tre-kule-folk') ) {
-              echo "TRE KULE FOLK FORTELLER DEG HVA DU SKAL GJØRE";
+              echo "LESESTOFF";
               }
               else {
               echo "LESESTOFF";
