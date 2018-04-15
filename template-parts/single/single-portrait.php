@@ -33,7 +33,7 @@ $dateMonthNoZero = get_the_date( 'n' );
 		</div>
 		<div class="" style="flex: 1; display: flex; justify-content: center; align-items: center; margin-top: -100px;">
 			<span class="overskrift-single hyphenate" style=" padding-left: 50px; font-family: 'Ludacrys'; font-size: 100px; line-height: 1.2;">
-				<span class="graytext kategori">
+				<span class="graytext kategori" style="text-transform: uppercase;">
             		<?php if ( get_field( 'emneknagg' ) ) {
             			echo get_field( 'emneknagg' );
             		} else {
@@ -225,7 +225,7 @@ $(window).scroll(function() {
 
 <article id="textbox-article" class="single-textbox hidden-lg-up">
 	<div id="title-intro" style="padding: 15px 0;">
-		<span class="graytext kategori" style="font-size: 14px;">
+		<span class="graytext kategori" style="font-size: 14px; text-transform: uppercase;">
           		<?php if ( get_field( 'emneknagg' ) ) {
             			echo get_field( 'emneknagg' );
             		} else {
