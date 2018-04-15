@@ -31,7 +31,7 @@
 <head>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115473596-1"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62250971-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -45,7 +45,7 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?v=2"></link>
+<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?v=7"></link>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
