@@ -1515,24 +1515,24 @@ strong i {
 }
 
 @media screen and (min-width: 576px) {
-.padding-sides-1vw {
-  padding: 0px 1.4vw 0em 1.4vw;
-}
-}
-
-@media screen and (max-width: 767px) {
-.sm-centered {
-  max-width: 100%;
-  height: auto;
-  margin: 0 auto;
-  display: block;
-}
+  .padding-sides-1vw {
+    padding: 0px 1.4vw 0em 1.4vw;
+  }
 }
 
 @media screen and (max-width: 767px) {
-.sm-text-center {
-  text-align: center;
+  .sm-centered {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
 }
+
+@media screen and (max-width: 767px) {
+  .sm-text-center {
+    text-align: center;
+  }
 }
 
 .inverted {
@@ -2447,14 +2447,6 @@ h6 strong {
           transform: rotate(90deg) translateX(50%); left: 87vw; display: block; top: 50%; font-weight: 400; letter-spacing: .18417em; text-transform: uppercase; margin: 0; padding: 0; border: 0; white-space: nowrap; font-size: 26px; font-family: 'Roboto', sans-serif; vertical-align: baseline; text-align: center;
 }
 
-.img-right {
-  float: right;
-  padding: 15px;
-  width: 50%;
-  position: absolute;
-  left: 110%;
-}
-
 .footer-text {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
@@ -2958,10 +2950,11 @@ a .nav-item .nav-link .active .meny-this {
 .img-right img {
   width: 100%;
   height: auto;
+  vertical-align: middle;
 }
 
-.img-right figcaption {
-  padding: 0 6px;
+.img-right figcaption, .img-center figcaption {
+  padding: 5px 6px;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: white;
@@ -2969,3 +2962,42 @@ a .nav-item .nav-link .active .meny-this {
   line-height: 1.5;
 }
 
+.img-center {
+  float: center;
+  padding: 20px 0;
+}
+
+.img-center img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.faktaboks {
+  padding: 10px;
+  border: 3px solid black;
+  margin-bottom: 25px;
+}
+
+.faktaboks-stor {
+  padding: 10px;
+  border-bottom: 3px solid black;
+  border-right: 3px solid black;
+  border-top: 3px solid black;
+  margin-bottom: 25px;
+}
+
+@media (max-width: 991px) {
+  .faktaboks-stor {
+    border-left: 3px solid black;
+  }
+}
+
+.opp-ned {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
