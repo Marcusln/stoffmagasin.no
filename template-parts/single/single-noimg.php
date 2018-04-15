@@ -27,7 +27,7 @@ $dateMonthNoZero = get_the_date( 'n' );
 
 	<div class="" style="background-color: #f9f7f1; border-bottom: 7px solid #f0ebdb;">
 
-			<span class="graytext kategori">
+			<span class="graytext kategori" style="text-transform: uppercase;">
             	<?php if ( get_field( 'emneknagg' ) ) {
             			echo get_field( 'emneknagg' );
             		} else {
@@ -135,7 +135,7 @@ $(window).scroll(function() {
 
 <article id="textbox-article" class="single-textbox hidden-lg-up">
 	<div id="title-intro" style="padding: 15px 0;">
-		<span class="graytext kategori" style="font-size: 14px;">
+		<span class="graytext kategori" style="font-size: 14px; text-transform: uppercase;">
           		<?php if ( get_field( 'emneknagg' ) ) {
             			echo get_field( 'emneknagg' );
             		} else {
