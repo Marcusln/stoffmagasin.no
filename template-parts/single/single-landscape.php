@@ -28,7 +28,7 @@ $dateMonthNoZero = get_the_date( 'n' );
 	</div>
 </div>
 
-<div class="hidden-lg-up" style="margin-top: 53px;">
+<div class="hidden-lg-up" style="margin-top: 76px;">
 	<img style="width: 100%; height: auto;" src="<?php the_post_thumbnail_url( array( 991,9999 ) ); ?>">
 </div>
 
@@ -106,7 +106,7 @@ $dateMonthNoZero = get_the_date( 'n' );
 				</span>
 			</div>
 				<!-- lead paragraph fetched from h4 tags via jquery script below. or else insert excerpt-->
-				<?php if ( has_excerpt() ) {
+				<?php if ( get_field( 'ingress' ) == 'visible' ) {
 				?>
 				<span id="ingress" style="font-family: 'Arapey', serif; font-size: 33px; font-weight: 400; line-height: 40px; letter-spacing: 1px;">
 
@@ -152,16 +152,14 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 						 </script>";
 
 					echo 'Tekst ' . get_field( 'journalist' ) . '<br />';
-					
-						if ( get_field( 'type_bilde' ) == 'Foto' ) {
+						}
+					if ( get_field( 'type_bilde' ) == 'Foto' ) {
 							echo 'Foto ' . get_field( 'foto' );
 							} elseif ( get_field( 'type_bilde' ) == 'Illustrasjon' ) {
 								echo 'Illustrasjon ' . get_field( 'illustrasjon' );
-							} else {
+							} elseif ( get_field( 'bildekreditering' ) ) {
 								echo get_field( 'bildekreditering' ) . ' ' . get_field( 'navn_kreditering' );
 							}
-
-						} 
 				?>
 			</span>
 		</div>
@@ -199,7 +197,7 @@ $(window).scroll(function() {
 
 <!-- Mobile article -->
 
-<article id="textbox-article" class="single-textbox hidden-lg-up">
+<article id="textbox-article" class="single-textbox hidden-lg-up" style=""> 
 	<div id="title-intro" style="padding: 15px 0;">
 		<span class="graytext kategori" style="font-size: 14px;">
           		<?php require(get_template_directory() . '/template-parts/emneknagg.php');  ?>
