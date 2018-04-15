@@ -20,7 +20,7 @@
 if ( isset( $_GET['utgave'] ) ) {
   $currentIssue = $_GET['utgave'];
 } else {
-  $currentIssue = 23;
+  $currentIssue = 24;
 }
 
 $previousIssue = $currentIssue - 1;
