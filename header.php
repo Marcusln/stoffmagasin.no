@@ -187,11 +187,11 @@ ga('send', 'pageview');
     </div>
 
   <div id="topbar-categories" class="hide" style="width: 100vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; flex-direction: row; font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 30px auto 25px auto;">
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6471">Debatt</a>
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/kultur/?kategori=tre-kule-folk">Tre kule</a>
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=quiz">Quiz</a>
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=lost-gjenfortalt">Løst gjenfortalt</a>
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=under-beltestedet">Under beltestedet</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6471?hm">Debatt</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/kultur/?kategori=tre-kule-folk?hm">Tre kule</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=quiz?hm">Quiz</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=lost-gjenfortalt?hm">Løst gjenfortalt</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=under-beltestedet?hm">Under beltestedet</a>
  </div>
     
     <div class="" style="display: flex; flex-direction: row; margin-right: 20px;">
