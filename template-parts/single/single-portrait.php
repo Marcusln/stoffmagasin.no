@@ -141,7 +141,9 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 					echo 'Tekst ' . get_field( 'journalist' ) . '<br />';
 					
 						if ( get_field( 'type_bilde' ) == 'Foto' ) {
-							echo 'Foto ' . get_field( 'foto' );
+							if ( get_field( 'foto' ) ) {
+								echo 'Foto ' . get_field( 'foto' );
+								}
 							} elseif ( get_field( 'type_bilde' ) == 'Illustrasjon' ) {
 								echo 'Illustrasjon ' . get_field( 'illustrasjon' );
 							} else {
@@ -212,18 +214,7 @@ $(window).scroll(function() {
 
 
 
-
-
-
-<!-- Mobile article -->
-
-<header class="header hidden-lg-up" style="margin-top: 76px;">
-	<img class="featured-img-mobile" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>" style="">
-</header>
-
-<!-- Mobile article -->
-
-<article id="textbox-article" class="single-textbox hidden-lg-up">
+<article id="textbox-article" class="single-textbox hidden-lg-up" style="margin-top: 70px;">
 	<div id="title-intro" style="padding: 15px 0;">
 		<span class="graytext kategori" style="font-size: 14px; text-transform: uppercase;">
           		<?php if ( get_field( 'emneknagg' ) ) {
@@ -267,6 +258,18 @@ $(window).scroll(function() {
 				?>
 				</span>
 	</div>
+</article>
+
+
+<!-- Mobile article -->
+
+<header class="header hidden-lg-up" style="margin-top: -60px;">
+	<img class="featured-img-mobile" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>" style="">
+</header>
+
+<!-- Mobile article -->
+
+<article id="textbox-article" class="single-textbox hidden-lg-up" style="margin-top: 15px;">
 
 		<div id="byline" class="" style="padding-bottom: 15px;">
 
@@ -283,7 +286,9 @@ $(window).scroll(function() {
 					echo 'Tekst ' . get_field( 'journalist' ) . '<br />';
 					
 						if ( get_field( 'type_bilde' ) == 'Foto' ) {
-							echo 'Foto ' . get_field( 'foto' );
+							if ( get_field( 'foto' ) ) {
+								echo 'Foto ' . get_field( 'foto' );
+								}
 							} elseif ( get_field( 'type_bilde' ) == 'Illustrasjon' ) {
 								echo 'Illustrasjon ' . get_field( 'illustrasjon' );
 							} else {
