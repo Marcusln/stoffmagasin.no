@@ -36,10 +36,28 @@ $month = $months[get_the_date('n')];
 
 </script>
 
-<!--
-  ********************** DESKTOP ***************** -->
+<!-- ********************** DESKTOP ***************** -->
 
-<article id="cover" class="hidden-sm-down feed-item component cover feed-box-border frontpage-margin" style="background-color: black; box-shadow: 3px 5px #f0ebdb;">
+<article id="cover" class="hidden-md-down feed-item component cover feed-box-border frontpage-margin" style="background-color: black; box-shadow: 3px 5px #f0ebdb;">
+<a class="feed-item component cover feed-box-border frontpage-margin" href="<?php echo $postUrl; ?>" style="text-decoration: none; color: black; background-color: black;">
+  <div class="feed-image-container" style="background-color: white !important; max-height: 70vh;">
+    <img style="" class="feed-image inline img-fluid" style="" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>">
+  </div>
+  <div class="feed-text-container" style="background-color: black;" >
+    <span class="kategori" style="padding-bottom: 1em; color: white;">FORSIDESTOFF</span><br />
+        <span class="overskrift-cover hyphenate" style="color: white;"><?php echo $postTitle; ?></span><br style="line-height: 2vh;">
+        <span class="byline-cover" style="color: white; font-family: 'Roboto', sans-serif;"><?php echo $excerpt; ?></span><br />
+        <?php if ( get_field( 'journalist' ) ) {
+          echo "<br /><span style='font-style: italic; color: rgb(128, 128, 128); font-weight: 100;'>&mdash; " . get_field( 'journalist' ) . "</span>";
+        } 
+         ?>
+  </div>
+</a>
+</article>
+
+<!-- ********************** Tablet ***************** -->
+
+<article id="cover-tablet" class="hidden-sm-down hidden-lg-up feed-item component cover feed-box-border frontpage-margin" style="background-color: black; box-shadow: 3px 5px #f0ebdb;">
 <a class="feed-item component cover feed-box-border frontpage-margin" href="<?php echo $postUrl; ?>" style="text-decoration: none; color: black; background-color: black;">
   <div class="feed-image-container" style="background-color: white !important; max-height: 70vh;">
     <img style="" class="feed-image inline img-fluid" style="" src="<?php the_post_thumbnail_url( array(900,9999) ); ?>">
