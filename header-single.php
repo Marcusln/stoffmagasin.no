@@ -45,7 +45,7 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?v=7"></link>
+<link rel="stylesheet" href="/wp-content/themes/stoffu/style.css?v=12"></link>
 
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -78,7 +78,11 @@
 <meta property="og:description" content="<?= $excerpt; ?>" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="<?= $permalink; ?>" />
-<meta property="og:image" content="<?= $img_src; ?>" />
+<?php if ( get_field( 'bilde_til_facebook' ) ) {
+  ?><meta property="og:image" content="<?= get_field( 'bilde_til_facebook' ) ?>" /><?php
+} else {
+  ?><meta property="og:image" content="<?= $img_src; ?>" /><?php
+}?>
 
 <?php wp_head(); ?>
 
