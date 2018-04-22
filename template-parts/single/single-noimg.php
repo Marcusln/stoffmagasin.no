@@ -88,7 +88,9 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 					echo 'Tekst ' . get_field( 'journalist' ) . '<br />';
 					
 						if ( get_field( 'type_bilde' ) == 'Foto' ) {
-							echo 'Foto ' . get_field( 'foto' );
+							if ( get_field( 'foto' ) ) {
+								echo 'Foto ' . get_field( 'foto' );
+								}
 							} elseif ( get_field( 'type_bilde' ) == 'Illustrasjon' ) {
 								echo 'Illustrasjon ' . get_field( 'illustrasjon' );
 							} else {
@@ -196,7 +198,9 @@ $(window).scroll(function() {
 					echo 'Tekst ' . get_field( 'journalist' ) . '<br />';
 					
 						if ( get_field( 'type_bilde' ) == 'Foto' ) {
-							echo 'Foto ' . get_field( 'foto' );
+							if ( get_field( 'foto' ) ) {
+								echo 'Foto ' . get_field( 'foto' );
+								}
 							} elseif ( get_field( 'type_bilde' ) == 'Illustrasjon' ) {
 								echo 'Illustrasjon ' . get_field( 'illustrasjon' );
 							} else {
