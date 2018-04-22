@@ -59,7 +59,7 @@
 		</div>
 	</div>
 	
-	<div class="" style="font-size: 6.5vh; color: white; position: absolute; bottom: 25vh; right: 5vw; display: flex; flex-direction: row; flex-wrap: nowrap;">
+	<div class="" style="font-size: 6.5vh; color: white; position: absolute; bottom: 30vh; right: 5vw; display: flex; flex-direction: row; flex-wrap: nowrap;">
 	      <a href="https://www.facebook.com/STOFFmagasin/" target="_blank">
 	        <i class="fa fa-facebook cursor-pointer-hover" style="padding: 0 10px 15px 10px; color: #3b5998 !important;" aria-hidden="true"></i>
 	      </a>
