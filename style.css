@@ -16,7 +16,7 @@ Lag oversikt over z-index...
 }
 
 @import url('http://fonts.googleapis.com/css?family=Roboto:200,400,500');
-@import url('http://fonts.googleapis.com/css?family=Arapey');
+@import url('http://fonts.googleapis.com/css?family=Arapey:200,400');
 
 @font-face {
     font-family: LudacrysStencil;
@@ -1320,7 +1320,7 @@ b {
 strong i {
   font-family: 'Arapey', serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 .meny {
@@ -1779,7 +1779,7 @@ strong i {
     line-height: 1
 }
 */
-@media (min-width: 1024px) { 
+@media (min-width: 992px) { 
     .feed-item.component {
         display: flex;
         flex: 1;
@@ -1838,7 +1838,7 @@ strong i {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
     .feed-item.component.landscape-crop .feed-image-container {
         height: 500px
     }
@@ -1909,7 +1909,7 @@ article .feed-item.component .feed-text-container {
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
     .feed-item.component.portrait .feed-text-container, .feed-item.component.cover .feed-text-container , .feed-item.component.square .feed-text-container {
         flex: 1
     }
@@ -2942,7 +2942,7 @@ a .nav-item .nav-link .active .meny-this {
     width: calc(100vw - 15vw - 750px - 100px);
     max-width: 350px;
   }
-  .img-right.img-small img {
+  .img-right.img-small {
     margin: 0 auto;
   }
 }
