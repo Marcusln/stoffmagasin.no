@@ -141,11 +141,11 @@
     </div>
 
     <div id="topbar-categories" class="hide" style="width: 100vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 30px auto 25px auto;">
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6471?hs">Debatt</a>
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/kultur/?kategori=tre-kule-folk?hs">Tre kule</a>
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=quiz?hs">Quiz</a>
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=lost-gjenfortalt?hs">Løst gjenfortalt</a>
-    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=under-beltestedet?hs">Under beltestedet</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/?page_id=6471">Debatt</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/kultur/?kategori=tre-kule-folk">Tre kule</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=quiz">Quiz</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=lost-gjenfortalt">Løst gjenfortalt</a>
+    <a class="topbar-cat" style="padding: 10px 15px 10px 15px;" href="/samfunn/?kategori=under-beltestedet">Under beltestedet</a>
  </div>
 
     <div class="" style="display: flex; flex-direction: row; ">
