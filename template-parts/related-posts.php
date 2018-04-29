@@ -32,7 +32,7 @@ $month = $months[get_the_date('n')];
 </div>
 
 <article class="hidden-md-up frontpage-margin feed-item component portrait" style="margin-top: 30px; margin-bottom: 30px;">
-<a class="no-decoration frontpage-margin feed-item component portrait" href="<?php echo $prevPostUrl; ?>" style="">
+<a class="no-decoration frontpage-margin feed-item component portrait" href="<?php echo $prevPostUrl . '?next'; ?>" style="">
    <div class="feed-image-container" style="">
       <img style="" class="feed-image inline img-fluid" src="<?php echo $prevThumbnail; ?>">
   </div>
