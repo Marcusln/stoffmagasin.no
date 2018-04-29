@@ -110,7 +110,7 @@ h4 { font-family: 'Arapey', serif; font-size: 40px; font-weight: 400; line-heigh
 </article>
 
         <nav class="nav-issue hide hidden-md-down" style="content: '';  position: absolute; text-align: center; display: block; vertical-align: baseline;">
-            <a class="next-post-link" style="transform: rotate(90deg) translateX(50%); left: 85vw; display: block; position: fixed; top: calc(50% - 175px); font-weight: 200; letter-spacing: .18417em; text-transform: uppercase; margin: 0 0 0 0; padding: 0; border: 0; white-space: nowrap; font-size: 33px; vertical-align: baseline; text-align: center;" href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>">Neste artikkel</a>
+            <a class="next-post-link" onclick="ga('send', 'event', 'buttons', 'nav-next-article');" style="transform: rotate(90deg) translateX(50%); left: 85vw; display: block; position: fixed; top: calc(50% - 175px); font-weight: 200; letter-spacing: .18417em; text-transform: uppercase; margin: 0 0 0 0; padding: 0; border: 0; white-space: nowrap; font-size: 33px; vertical-align: baseline; text-align: center;" href="<?php echo get_permalink(get_adjacent_post(false,'',true)) . '?n';?>">Neste artikkel</a>
         </nav>
 
 <script>
