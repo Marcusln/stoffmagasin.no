@@ -183,7 +183,9 @@ ga('send', 'pageview');
 
     <div id="" class="cursor-pointer-hover" style="margin-left: 20px; width: calc(13vw - 30px);">
       <a href="/index.php" id="logo-link" class="initiallyHidden"><img id="headerLogo" src="/wp-content/uploads/2017/04/stoff.png" style="height: 35px; padding: 5px; filter: none; z-index: 1001;"></a>
-      <a id="papirutgave-klikk" class="papirutgave-knapp bg-color-paper" href="http://bit.ly/2JWtZ8n" target="_blank" style="padding: 5px;">Les nr. <?php echo $currentIssue; ?> &nbsp;&nbsp;&nbsp;<?php echo $yearIssue; ?>. årgang <!--&nbsp;&nbsp;<i id="papirutgave-ikon" class="fa fa-chevron-down" style="font-weight: 100;" aria-hidden="true"></i>--></a>
+      <a id="papirutgave-klikk" class="papirutgave-knapp bg-color-paper" href="http://bit.ly/2JWtZ8n" target="_blank" style="padding: 5px;">Les papirutgaven
+        <!-- Les nr. <?php echo $currentIssue; ?> &nbsp;&nbsp;&nbsp;<?php echo $yearIssue; ?>. årgang -->
+        <!-- &nbsp;&nbsp;<i id="papirutgave-ikon" class="fa fa-chevron-down" style="font-weight: 100;" aria-hidden="true"></i>--></a>
     </div>
 
   <div id="topbar-categories" class="hide" style="width: 100vw; font-family: 'Roboto', sans-serif; display: flex; justify-content: center; flex-direction: row; font-size: 16px; text-transform: uppercase; font-weight: 400; margin: 30px auto 25px auto;">
