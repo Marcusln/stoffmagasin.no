@@ -19,16 +19,16 @@ $image3Url = wp_get_attachment_url( $image3 );
 
 <!-- Box 1/3 -->
 <div class="most-read-article" style="width: 30%;">
-<a class="no-decoration" href="/?p=6873" style="text-decoration: none; color: black;">
+<a class="no-decoration" href="/?p=2130" style="text-decoration: none; color: black;">
   <div class="" style="overflow: hidden;">
-    <img class="" style="height: 300px; min-width: 100%; object-fit: cover;" src="https://i2.wp.com/www.stoffmagasin.no/wp-content/uploads/2018/04/TerjeS%C3%B8viknes_Montasje-1.jpg?fit=600%2C450&ssl=1">
+    <img class="" style="height: 300px; min-width: 100%; object-fit: cover;" src="https://i2.wp.com/www.stoffmagasin.no/wp-content/uploads/2016/02/stoff8_studentorgSv%C3%A6v.jpg?fit=900%2C958&ssl=1">
   </div>
     <div class="" style="padding: 5% 5% 0 5%; align-self: baseline;">
       <span class="graytext kategori" style="font-size: 14px !important;">
-        KOMMENTARSTOFF
+        SAMFUNNSTOFF
       </span><br />
-      <span class="nestensvart" style="font-size: 25px; font-family: 'Ludacrys'; ">
-        <?php echo get_the_title( $post = 6873 ); ?>
+      <span class="nestensvart" style="font-size: 24px; font-family: 'Ludacrys'; ">
+        <?php echo get_the_title( $post = 2130 ); ?>
       </span>
     </div><!--
     <div style="padding: 0 5% 5% 5%; align-self: baseline;">
