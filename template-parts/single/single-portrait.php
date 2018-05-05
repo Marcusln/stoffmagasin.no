@@ -192,8 +192,6 @@ $(window).scroll(function() {
 
 </script>
 
-<?php // echo do_shortcode('[jetpack-related-posts]'); ?>
-
 
 </div><!-- close div for desktop -->
 
