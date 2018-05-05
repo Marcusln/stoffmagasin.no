@@ -17,7 +17,7 @@
               echo "LØST GJENFORTALT";
               }
               elseif ( in_category('samfunn') ) {
-              echo "SAMFUNNSSTOFF";
+              echo "SAMFUNNSTOFF";
               } elseif ( in_category('film') ) {
               echo "FILMSTOFF";
               } elseif ( in_category('anmeldelser') ) {
