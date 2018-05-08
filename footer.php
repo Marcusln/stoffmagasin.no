@@ -9,8 +9,11 @@
  * @package Stoffu
  */
 
+  wp_footer();
 
 ?>
+
+
 
 	</div><!-- #content -->
 </div> <!-- #hide-bellow-om-oss -->
