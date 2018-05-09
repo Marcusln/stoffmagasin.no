@@ -18,7 +18,7 @@ $month = $months[get_the_date('n')];
 
 <article id="content-standard" class="frontpage-margin feed-item component portrait feed-box-border hidden-sm-down" style="margin-top: 30px; margin-bottom: 30px;">
 <a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $postUrl; ?>" style="">
-   <div class="feed-image-container" style="">
+   <div class="feed-image-container" style="background-color: white;">
       <img style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(600,999) ); ?>">
   </div>
   <div class="feed-text-container" style="flex: 2 !important;" >
@@ -40,7 +40,7 @@ $month = $months[get_the_date('n')];
 <!-- ************ MOBILE -->
 <article id="content-standard" class="hidden-md-up feed-item component portrait" style="">
 <a class="no-decoration frontpage-margin feed-item component portrait feed-box-border" href="<?php echo $postUrl; ?>" style="">
-   <div class="feed-image-container" style="">
+   <div class="feed-image-container" style="background-color: white;">
       <img style="" class="feed-image inline img-fluid" src="<?php the_post_thumbnail_url( array(600,999) ); ?>">
   </div>
   <div class="feed-text-container" style="" >
